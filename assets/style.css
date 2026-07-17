@@ -243,6 +243,9 @@ header.scrolled .logo img {
     gap: 6px;
     text-decoration: none;
     transition: var(--transition-smooth);
+    white-space: nowrap;
+    height: 40px;
+    box-sizing: border-box;
 }
 
 .nav-portal-btn:hover {
@@ -287,11 +290,17 @@ header.scrolled .logo img {
 .lang-switch {
     font-weight: 700;
     font-size: 0.82rem;
-    padding: 7px 14px;
+    padding: 0 16px;
     border: 1.5px solid var(--color-gold-border);
     border-radius: var(--border-radius-sm);
     color: var(--color-gold-primary);
     transition: var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .lang-switch:hover {
@@ -303,12 +312,18 @@ header.scrolled .logo img {
 .nav-cta {
     background: var(--gold-gradient);
     color: var(--color-text-light);
-    padding: 11px 26px;
+    padding: 0 20px;
     border-radius: var(--border-radius-sm);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     box-shadow: 0 4px 15px var(--color-gold-shadow);
     transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    height: 40px;
+    box-sizing: border-box;
 }
 
 .nav-cta:hover {
