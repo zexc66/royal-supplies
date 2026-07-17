@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب تسعير التموين وحساب العائد على الاستثمار للشركات | رويال سابلايز</title>
+    <meta name="description" content="احسب وفوراتك الإدارية واطلب عرض سعر تموين مخصص لشركتك في مصر. أسعار تفضيلية مخصصة للشركات الكبرى والمتوسطة للورق والحبر والبوفيه.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <!-- --- Header --- -->
+    <header>
+        <div class="nav-container">
+            <a href="index-ar.html" class="logo" id="headerLogo">
+                <img src="assets/logo.webp?v=3" alt="رويال سابلايز شعار التاج">
+                <span>رويال سابلايز</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index-ar.html">الرئيسية</a></li>
+                    
+                    <li><a href="services-ar.html">خدماتنا</a></li>
+                    <li><a href="industries-ar.html">قطاعاتنا</a></li>
+                    <li><a href="about-ar.html">قصتنا</a></li>
+                    <li><a href="news-ar.html">رؤى وأخبار</a></li>
+                    <li><a href="careers-ar.html">وظائف</a></li>
+                    <li><a href="contact-ar.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-trigger-btn" id="searchTrigger" aria-label="فتح البحث">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <a href="quote.html" class="lang-switch">English</a>
+                <a href="dashboard-preview-ar.html" class="nav-portal-btn" style="margin-left: 12px; font-size: 0.85rem; font-weight: 600; color: var(--color-text-main); display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-family: var(--font-arabic);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                    بوابة العملاء
+                </a>
+                <a href="quote-ar.html" class="nav-cta active" id="navQuoteCta">طلب عرض سعر</a>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle Navigation menu" id="navMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- --- Subpage Hero --- -->
+    <section class="about-hero" style="padding-bottom: 60px;">
+        <div class="container reveal">
+            <div class="badge-pill">حساب الشركات B2B</div>
+            <h1>طلب خطة تموين مخصصة</h1>
+            <p style="max-width: 650px; margin: 20px auto 0 auto; color: var(--color-text-muted);">اطلب تسعير الجملة، حدد مواعيد وتكرار التوريد، وانتقِ سلة المنتجات المخصصة لمكاتب شركتك.</p>
+        </div>
+    </section>
+
+    <!-- --- Form Section --- -->
+    <section style="padding-top: 40px;">
+        <div class="container">
+            <div class="quote-layout reveal">
+                
+                <!-- Quote Form -->
+                <div class="quote-form-container">
+                                        <!-- Step Progress Indicator -->
+                    <div class="wizard-steps-progress">
+                        <div class="wizard-progress-bar" id="wizardProgressBar"></div>
+                        <div class="wizard-step-node active" data-step="1">1<span class="step-label" style="font-family: var(--font-arabic);">الملف</span></div>
+                        <div class="wizard-step-node" data-step="2">2<span class="step-label" style="font-family: var(--font-arabic);">الحجم</span></div>
+                        <div class="wizard-step-node" data-step="3">3<span class="step-label" style="font-family: var(--font-arabic);">الفئات</span></div>
+                        <div class="wizard-step-node" data-step="4">4<span class="step-label" style="font-family: var(--font-arabic);">المراجعة</span></div>
+                    </div>
+
+                    <form id="corporateQuoteForm">
+                        
+                        <!-- Step 1: Corporate Profile -->
+                        <div class="wizard-step active" id="step1">
+                            <h4 style="font-size: 1.2rem; margin-bottom: 20px; font-family: var(--font-arabic);">الخطوة 1: ملف الشركة</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="companyName" style="font-family: var(--font-arabic);">اسم الشركة</label>
+                                    <input type="text" id="companyName" name="companyName" placeholder="مثال: فودافون مصر" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactPerson" style="font-family: var(--font-arabic);">الشخص المسؤول</label>
+                                    <input type="text" id="contactPerson" name="contactPerson" placeholder="مثال: سارة رأفت" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="corporateEmail" style="font-family: var(--font-arabic);">البريد الإلكتروني للشركة</label>
+                                    <input type="email" id="corporateEmail" name="corporateEmail" placeholder="s.rafat@company.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber" style="font-family: var(--font-arabic);">رقم الهاتف</label>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+20 1X XXXX XXXX" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Scale & Scheduling -->
+                        <div class="wizard-step" id="step2">
+                            <h4 style="font-size: 1.2rem; margin-bottom: 20px; font-family: var(--font-arabic);">الخطوة 2: حجم التموين والجدولة</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="employeeCount" style="font-family: var(--font-arabic);">متوسط عدد الموظفين</label>
+                                    <div class="luxury-slider-wrapper">
+                                        <input type="range" id="employeeCount" name="employeeCount" min="10" max="1000" step="10" value="150" class="luxury-range-slider">
+                                        <div class="slider-badge" style="font-family: var(--font-arabic);"><span id="sliderVal" style="font-family: var(--font-sans);">150</span> موظف</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="restockFrequency" style="font-family: var(--font-arabic);">دورية التموين</label>
+                                    <select id="restockFrequency" name="restockFrequency" style="font-family: var(--font-arabic);">
+                                        <option value="weekly">تموين أسبوعي</option>
+                                        <option value="biweekly" selected>تموين نصف شهري (كل أسبوعين)</option>
+                                        <option value="monthly">تموين شهري</option>
+                                        <option value="on-demand">تموين عند الطلب</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Restock Categories -->
+                        <div class="wizard-step" id="step3">
+                            <h4 style="font-size: 1.2rem; margin-bottom: 20px; font-family: var(--font-arabic);">الخطوة 3: فئات التموين المطلوبة</h4>
+                            <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 20px; font-family: var(--font-arabic);">حدد جميع فئات المرافق التي ترغب في إدارتها تحت هذا العقد.</p>
+                            
+                            <div class="wizard-card-grid">
+                                <!-- Card 1 -->
+                                <div class="wizard-check-card checked" data-value="pantry_coffee">
+                                    <input type="checkbox" name="categories[]" value="pantry_coffee" checked style="display:none;">
+                                    <div class="card-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                                    </div>
+                                    <h5 style="font-family: var(--font-arabic);">القهوة والإسبريسو</h5>
+                                    <p style="font-family: var(--font-arabic);">حبوب قهوة مختصة ومكائن إعداد.</p>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="wizard-check-card checked" data-value="pantry_tea">
+                                    <input type="checkbox" name="categories[]" value="pantry_tea" checked style="display:none;">
+                                    <div class="card-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 22h20"></path><path d="M5 22V11a7 7 0 0 1 14 0v11"></path><path d="M14 2v4"></path><path d="M10 2v4"></path></svg>
+                                    </div>
+                                    <h5 style="font-family: var(--font-arabic);">الشاي وتوليفات الأعشاب</h5>
+                                    <p style="font-family: var(--font-arabic);">شاي عضوي فاخر للبوفيه والمكاتب.</p>
+                                </div>
+
+                                <!-- Card 3 -->
+                                <div class="wizard-check-card" data-value="pantry_snacks">
+                                    <input type="checkbox" name="categories[]" value="pantry_snacks" style="display:none;">
+                                    <div class="card-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                                    </div>
+                                    <h5 style="font-family: var(--font-arabic);">وجبات خفيفة ومشروبات</h5>
+                                    <p style="font-family: var(--font-arabic);">وجبات خفيفة للمدراء ألبان ومشروبات.</p>
+                                </div>
+
+                                <!-- Card 4 -->
+                                <div class="wizard-check-card" data-value="pantry_cups">
+                                    <input type="checkbox" name="categories[]" value="pantry_cups" style="display:none;">
+                                    <div class="card-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 8h1a4 4 0 0 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"></path></svg>
+                                    </div>
+                                    <h5 style="font-family: var(--font-arabic);">أكواب ورقية وأدوات مائدة</h5>
+                                    <p style="font-family: var(--font-arabic);">أكواب ومستلزمات بوفيه قابلة للتحلل.</p>
+                                </div>
+
+                                <!-- Card 5 -->
+                                <div class="wizard-check-card checked" data-value="office_paper">
+                                    <input type="checkbox" name="categories[]" value="office_paper" checked style="display:none;">
+                                    <div class="card-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    </div>
+                                    <h5 style="font-family: var(--font-arabic);">ورق تصوير وفاخر</h5>
+                                    <p style="font-family: var(--font-arabic);">ورق تصوير A4 فاخر معتمد بيئياً.</p>
+                                </div>
+
+                                <!-- Card 6 -->
+                                <div class="wizard-check-card checked" data-value="office_ink">
+                                    <input type="checkbox" name="categories[]" value="office_ink" checked style="display:none;">
+                                    <div class="card-icon">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><polyline points="6 9 6 2 18 2 18 9"></polyline><rect x="6" y="14" width="12" height="8"></rect></svg>
+                                    </div>
+                                    <h5 style="font-family: var(--font-arabic);">أحبار وطابعات</h5>
+                                    <p style="font-family: var(--font-arabic);">خراطيش حبر LaserJet أصلية (OEM).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Preview & Submit -->
+                        <div class="wizard-step" id="step4">
+                            <h4 style="font-size: 1.2rem; margin-bottom: 20px; font-family: var(--font-arabic);">الخطوة 4: ملخص الطلب والملاحظات</h4>
+                            <div style="background: var(--color-bg-secondary); border: 1px solid var(--color-gold-border); border-radius: var(--border-radius-md); padding: 20px; margin-bottom: 24px;">
+                                <h5 style="margin-top:0; color: var(--color-gold-primary); font-size: 0.95rem; font-family: var(--font-arabic);">ملخص طلب الخدمة</h5>
+                                <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size: 0.88rem; font-family: var(--font-arabic);" id="wizardSummaryList">
+                                    <!-- Dynamic summary items inserted by JS -->
+                                </ul>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customNotes" style="font-family: var(--font-arabic);">ملاحظات أو متطلبات خاصة بالتموين</label>
+                                <textarea id="customNotes" name="customNotes" rows="3" placeholder="اذكر هنا أي ماركات تفضلونها، قيود ساعات التوريد الليلية، أو الفروع المتعددة المراد خدمتها..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="form-row" style="margin-top: 30px; gap: 20px;">
+                            <button type="button" class="btn-primary" id="btnWizardPrev" style="background: transparent; color: var(--color-text-main); border: 1.5px solid var(--color-gold-border); display: none; width: auto; padding: 12px 28px; font-family: var(--font-arabic);">
+                                السابق
+                            </button>
+                            <button type="button" class="btn-primary" id="btnWizardNext" style="width: 100%; justify-content: center; padding: 14px 0; font-family: var(--font-arabic);">
+                                استمرار
+                            </button>
+                            <button type="submit" class="btn-primary" id="submitFormBtn" style="display: none; width: 100%; justify-content: center; padding: 14px 0; font-family: var(--font-arabic);">
+                                تقديم طلب التموين للشركات
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sidebar Tool -->
+                <div class="quote-sidebar">
+                    <h3>حاسبة تكاليف التموين الفوري</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 24px; line-height: 1.5;">احصل على تقدير فوري تقريبي للميزانية الشهرية المطلوبة لتعبئة مكاتب منشأتك بالكامل بناءً على عدد الموظفين ومعدل الاستهلاك.</p>
+                    
+                    <div style="background-color: var(--color-bg-primary); border: 1px solid var(--color-gold-border); border-radius: var(--border-radius-md); padding: 24px; text-align: center; margin-bottom: 30px;">
+                        <h5 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: 8px;">التكلفة التقديرية شهرياً</h5>
+                        <div id="estimateTotal" style="font-family: var(--font-arabic); font-size: 2.25rem; font-weight: 600; color: var(--color-gold-primary);">0 جنيه</div>
+                        <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 8px;">شاملة ضريبة القيمة المضافة ورسوم التوصيل والترتيب الليلي.</p>
+                    </div>
+
+                    <!-- ROI Calculator Widget Block -->
+                    <div class="roi-calculator-widget" style="margin-top: 24px; padding: 20px; background-color: var(--color-bg-secondary); border: 1.5px dashed var(--color-gold-border); border-radius: var(--border-radius-md); text-align: right;">
+                        <h4 style="font-size: 1rem; margin-bottom: 8px; color: var(--color-gold-primary); display: flex; align-items: center; gap: 8px; flex-direction: row-reverse; font-family: var(--font-arabic);">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                            العائد الاستثماري والوفر الإداري (ROI)
+                        </h4>
+                        <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 16px; font-family: var(--font-arabic);">احسب عدد الساعات والوفر المالي المحقق لشركتك عند إسناد إدارة المشتريات والتموين لشركتنا.</p>
+                        
+                        <div style="margin-bottom: 12px;">
+                            <label style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 6px; font-family: var(--font-arabic);">الساعات الأسبوعية المشتتة لشراء المستلزمات</label>
+                            <input type="range" id="roiHours" min="1" max="20" value="5" class="luxury-range-slider" style="width: 100%; height: 6px;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--color-text-main); margin-top: 6px; flex-direction: row-reverse;">
+                                <span>ساعة واحدة</span>
+                                <span style="font-weight: 700; color: var(--color-gold-primary); font-family: var(--font-arabic);"><span id="roiHoursVal">5</span> ساعات</span>
+                                <span>20 ساعة</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <label style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 6px; font-family: var(--font-arabic);">متوسط الأجر بالساعة للموظف الإداري (جنيه)</label>
+                            <input type="range" id="roiSalary" min="50" max="500" step="10" value="120" class="luxury-range-slider" style="width: 100%; height: 6px;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--color-text-main); margin-top: 6px; flex-direction: row-reverse;">
+                                <span>50 جنيه</span>
+                                <span style="font-weight: 700; color: var(--color-gold-primary); font-family: var(--font-arabic);"><span id="roiSalaryVal">120</span> جنيه/ساعة</span>
+                                <span>500 جنيه</span>
+                            </div>
+                        </div>
+
+                        <div style="background-color: var(--color-bg-primary); padding: 14px; border-radius: var(--border-radius-sm); border: 1px solid var(--color-gold-border); text-align: right; font-size: 0.8rem; line-height: 1.6;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 4px; flex-direction: row-reverse;">
+                                <span style="color: var(--color-text-muted); font-family: var(--font-arabic);">ساعات العمل الإدارية الموفرة:</span>
+                                <span style="font-weight: 700; color: var(--color-text-main); font-family: var(--font-arabic);"><span id="roiSavedTime">260</span> ساعة سنوياً</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; flex-direction: row-reverse;">
+                                <span style="color: var(--color-gold-primary); font-weight: 600; font-family: var(--font-arabic);">الوفر المالي السنوي التقديري:</span>
+                                <span style="font-weight: 700; color: var(--color-gold-primary); font-family: var(--font-arabic);"><span id="roiSavedMoney">45,600</span> جنيه</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="font-size: 1.1rem; margin-bottom: 20px;">امتيازات حسابات الشركات</h4>
+                    
+                    <div class="service-feature">
+                        <div class="service-feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <div class="service-feature-text">
+                            <h5>أخصائي حسابات وكونسيرج مخصص</h5>
+                            <p>خط ساخن ومباشر لتعديل الطلبيات، جدولة التجهيزات للمناسبات الخاصة، وحل المشكلات الطارئة.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-feature">
+                        <div class="service-feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <div class="service-feature-text">
+                            <h5>تسهيلات ائتمانية وتوريد فوترة سنوي</h5>
+                            <p>كشوفات فوترة شهرية موحدة متطابقة، مع تسهيلات دفع وسداد تصل إلى ٣٠ يوماً للجهات المعتمدة.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-feature" style="margin-bottom: 0;">
+                        <div class="service-feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <div class="service-feature-text">
+                            <h5>ضمان وحماية سرية المكاتب</h5>
+                            <p>توقيع اتفاقيات حماية وسرية صارمة لجميع أفراد الطاقم اللوجستي قبل تموين مكاتب الإدارة والمالية.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="success-modal-overlay" id="modalOverlay"></div>
+    <div class="success-modal" id="successModal">
+        <div class="success-icon-badge">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h3 style="font-size: 1.75rem; margin-bottom: 12px; font-family: var(--font-arabic); font-weight: 500;">تم استقبال طلبك بنجاح</h3>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.5;">تم تسجيل تفاصيل طلب خطة التموين لشركتكم. سيقوم مسؤول onboarding حسابات الشركات بالتواصل معكم في غضون ساعتي عمل عبر البريد الإلكتروني أو الهاتف المذكور.</p>
+        <button class="modal-close-btn" id="modalCloseBtn">العودة للموقع</button>
+    </div>
+
+    <!-- --- Footer --- -->
+    <footer>
+        <div class="nav-container footer-grid">
+            <div class="footer-brand">
+                <a href="index-ar.html" class="logo">
+                    <img src="assets/logo.webp?v=3" alt="رويال سابلايز شعار التاج">
+                    <span>رويال سابلايز</span>
+                </a>
+                <p>خدمات تعبئة مطابخ مكاتب الشركات الفاخرة، توريد القرطاسية وأدوات الكتابة وتجهيز عتاد الأحبار والأوراق بالإسكندرية والقاهرة.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h5>خدماتنا</h5>
+                <ul class="footer-links">
+                    <li><a href="services-ar.html">مستلزمات الضيافة</a></li>
+                    <li><a href="services-ar.html">قرطاسية المكاتب</a></li>
+                    <li><a href="services-ar.html">الأحبار والطابعات</a></li>
+                    <li><a href="quote-ar.html">خطة تموين مخصصة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h5>الشركة</h5>
+                <ul class="footer-links">
+                    <li><a href="about-ar.html">قصتنا</a></li>
+                    <li><a href="about-ar.html#logistics">جودة الخدمات اللوجستية</a></li>
+                    <li><a href="contact-ar.html">فروعنا ومستودعاتنا</a></li>
+                    <li><a href="contact-ar.html#support">دعم الشركات</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h5>معلومات التواصل</h5>
+                <ul class="footer-links">
+                    <li><a href="mailto:concierge@royalsupplies.com">concierge@royalsupplies.com</a></li>
+                    <li><a href="tel:+20225009988"><span dir="ltr">+20 2 2500 9988</span></a></li>
+                    <li><a href="contact-ar.html">مكاتب القاهرة والإسكندرية</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="nav-container footer-bottom">
+            <p>&copy; ٢٠٢٦ رويال سابلايز للشركات. جميع الحقوق محفوظة.</p>
+            <p>تموين وتجهيز المرافق المكتبية الراقية.</p>
+        </div>
+    </footer>
+
+    <!-- --- Search Overlay --- -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-inner">
+            <div class="search-header-row">
+                <h3 style="font-family: var(--font-arabic); font-size: 1.5rem; font-weight: 500;">البحث في رويال سابلايز</h3>
+                <button class="search-close-btn" id="searchClose" aria-label="إغلاق البحث">&times;</button>
+            </div>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input-field" id="searchInputField" placeholder="ابحث عن منتجات، مقالات، خدمات...">
+            </div>
+            <ul class="search-results-list" id="searchResultsList"></ul>
+        </div>
+    </div>
+
+    <script src="assets/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectParam = urlParams.get('select');
+            
+            if (selectParam) {
+                const notesArea = document.getElementById('customNotes');
+                if (notesArea) {
+                    notesArea.value = `مرحباً، نود إدراج المنتج ذو المعرّف [${selectParam}] ضمن خطة إعادة التعبئة الدورية لشركتنا. يرجى توضيح أسعار الجملة.`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

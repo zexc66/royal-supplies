@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Restocking & Facility Pantry Services Cairo | Royal Supplies</title>
+    <meta name="description" content="Discover our B2B office facilities restocking services in Greater Cairo and Alexandria. We offer custom consumption auditing, dedicated account concierges, and quiet overnight replenishment.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <!-- --- Header --- -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo" id="headerLogo">
+                <img src="assets/logo.webp?v=3" alt="Royal Supplies Crown Logo">
+                <span>ROYAL SUPPLIES</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="news.html">Insights</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-trigger-btn" id="searchTrigger" aria-label="Open Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <a href="services-ar.html" class="lang-switch">العربية</a>
+                <a href="dashboard-preview.html" class="nav-portal-btn" style="margin-right: 12px; font-size: 0.85rem; font-weight: 600; color: var(--color-text-main); display: inline-flex; align-items: center; gap: 6px; text-decoration: none;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                    Client Portal
+                </a>
+                <a href="quote.html" class="nav-cta" id="navQuoteCta">Request Quote</a>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle Navigation menu" id="navMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- --- Subpage Hero --- -->
+    <section class="about-hero">
+        <div class="container reveal">
+            <div class="badge-pill">OUR SERVICES</div>
+            <h1>B2B Restocking Capabilities</h1>
+            <p style="max-width: 650px; margin: 20px auto 0 auto; color: var(--color-text-muted);">How we keep your corporate facilities running efficiently and elegantly behind the scenes.</p>
+        </div>
+    </section>
+
+    <!-- --- Services Details Grid --- -->
+    <section class="services-list-section">
+        <div class="container">
+            
+            <!-- Service 1: Auditing -->
+            <div class="showcase-split reveal" style="margin-bottom: 80px;">
+                <div class="showcase-image-wrapper">
+                    <img  src="assets/b2b-office-audit.webp" alt="Royal Supplies Facility Auditing Inspection Desk" loading="lazy">
+                </div>
+                <div class="showcase-content">
+                    <div class="badge-pill">STEP 01</div>
+                    <h3>Facility Usage Auditing</h3>
+                    <p>Before launching your stocking schedule, our analytics curators conduct a comprehensive audit of your workspace headcount, average printing volumes, and coffee bar consumption rates. We establish a customized replenishment baseline that prevents both storage overflow and supply shortages.</p>
+                    <ul class="showcase-list" style="margin-bottom: 0;">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Headcount-calibrated consumption metrics
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Ink and paper volume analytics
+                        </li>
+                    </ul>
+
+                    <!-- Audit Simulator Trigger Widget -->
+                    <div class="audit-simulator-widget" style="margin-top: 30px; padding: 24px; background: var(--color-bg-primary); border: 1px solid var(--color-gold-border); border-radius: var(--border-radius-md); text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">Workspace Consumption Simulator</h4>
+                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 20px;">Simulate a consumption audit report for your office premises instantly.</p>
+                        
+                        <div class="audit-sim-form">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 6px;">Workspace Type</label>
+                                    <select id="simWorkspaceType" style="width: 100%; padding: 10px; border: 1.5px solid var(--color-gold-border); border-radius: var(--border-radius-sm); outline: none; background: #fff; font-size: 0.85rem; color: var(--color-text-main);">
+                                        <option value="finance">Banking & Finance Hub</option>
+                                        <option value="tech" selected>Technology Development Center</option>
+                                        <option value="luxury">Luxury Corporate Office</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-muted); display: block; margin-bottom: 6px;">Headcount</label>
+                                    <input type="number" id="simHeadcount" value="150" min="10" max="1000" style="width: 100%; padding: 9px; border: 1.5px solid var(--color-gold-border); border-radius: var(--border-radius-sm); outline: none; font-size: 0.85rem; color: var(--color-text-main);">
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn-primary" id="runSimBtn" style="padding: 12px 20px; font-size: 0.85rem; width: 100%; justify-content: center; border: none; cursor: pointer;">
+                                Run Consumption Audit
+                            </button>
+                        </div>
+                        
+                        <div class="audit-sim-loading" style="display: none; text-align: center; padding: 20px 0;">
+                            <div class="sim-spinner" style="width: 32px; height: 32px; border: 3px solid var(--color-gold-light); border-top-color: var(--color-gold-primary); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 12px auto;"></div>
+                            <p style="font-size: 0.85rem; color: var(--color-gold-primary); font-weight: 600;" id="simStatusText">Analyzing workspace metrics...</p>
+                        </div>
+                        
+                        <div class="audit-sim-result" style="display: none; border-top: 1px solid var(--color-gold-border); margin-top: 20px; padding-top: 20px;">
+                            <h5 style="font-size: 0.95rem; margin-bottom: 12px; color: var(--color-gold-primary); font-weight: 600;">Custom Restock Recommendations</h5>
+                            <div style="background-color: var(--color-bg-secondary); padding: 16px; border-radius: var(--border-radius-md); font-size: 0.85rem; line-height: 1.6; color: var(--color-text-main); border: 1px solid var(--color-gold-border);">
+                                <ul style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 8px;">
+                                    <li>☕ **Coffee Beans**: <span id="resCoffee" style="font-weight: 700;">12 kg</span> per week</li>
+                                    <li>📄 **Paper Supplies**: <span id="resPaper" style="font-weight: 700;">8 reams</span> per week</li>
+                                    <li>🖨️ **Toner Reserves**: <span id="resToner" style="font-weight: 700;">3 cartridges</span> per month</li>
+                                    <li>⚡ **Replenishment**: <span id="resFreq" style="font-weight: 700;">Bi-weekly</span> scheduled restock</li>
+                                </ul>
+                            </div>
+                            <a href="quote.html" class="btn-primary" style="margin-top: 14px; width: 100%; justify-content: center; font-size: 0.85rem; padding: 12px 0;">
+                                Apply for this Replenishment Plan
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Account Onboarding -->
+            <div class="showcase-split reveal" style="margin-bottom: 80px;">
+                <div class="showcase-content">
+                    <div class="badge-pill">STEP 02</div>
+                    <h3>Dedicated Account Concierge</h3>
+                    <p>Every Royal Supplies corporate account is paired with a dedicated onboarding curator. Your concierge coordinates delivery schedules, processes volume changes, and manages custom catering configurations for executive events or board meetings.</p>
+                    <ul class="showcase-list" style="margin-bottom: 0;">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Direct telephone and WhatsApp hotline
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Consolidated monthly B2B billing
+                        </li>
+                    </ul>
+                </div>
+                <div class="showcase-image-wrapper">
+                    <img  src="assets/b2b-pantry-restock.webp" alt="Premium Concierge Restocking Display" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Service 3: Night Logistics -->
+            <div class="showcase-split reveal" style="margin-bottom: 80px;">
+                <div class="showcase-image-wrapper">
+                    <img  src="assets/b2b-office-supplies.webp" alt="Silent night restocking delivery setup" loading="lazy">
+                </div>
+                <div class="showcase-content">
+                    <div class="badge-pill">STEP 03</div>
+                    <h3>Quiet Night Logistics</h3>
+                    <p>To eliminate operational disruption, our logistics crews perform deliveries between 10:00 PM and 6:00 AM. Our security-cleared personnel place stationery directly inside copy room cabinets, stock espresso machines, and organize breakroom kitchen drawers, allowing your team to start a fully restocked day.</p>
+                    <ul class="showcase-list" style="margin-bottom: 0;">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Security-cleared delivery personnel
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Noiseless after-hours distribution
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 4: Consolidated Invoicing -->
+            <div class="showcase-split reveal" style="margin-bottom: 80px;">
+                <div class="showcase-image-wrapper">
+                    <!-- Interactive Invoice Simulator Widget -->
+                    <div class="invoice-simulator-card" style="background: var(--color-bg-primary); border: 1.5px solid var(--color-gold-primary); border-radius: var(--border-radius-md); padding: 30px; box-shadow: 0 15px 40px rgba(175,141,76,0.06); text-align: left; position: relative;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-gold-border); padding-bottom: 12px; margin-bottom: 20px;">
+                            <div>
+                                <h4 style="font-size: 1rem; color: var(--color-text-main); margin-bottom: 2px;">Royal Supplies B2B Invoice</h4>
+                                <span style="font-size: 0.72rem; color: var(--color-text-muted);">Invoice #RS-2026-8924</span>
+                            </div>
+                            <div class="badge-pill" style="color: #25D366; background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.2);">PAID</div>
+                        </div>
+
+                        <div style="font-size: 0.8rem; margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="color: var(--color-text-muted);">Client:</span>
+                                <span style="font-weight: 700; color: var(--color-text-main);">Vodafone Egypt HQ</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--color-text-muted);">Billing Period:</span>
+                                <span style="font-weight: 700; color: var(--color-text-main);">July 1 - July 31, 2026</span>
+                            </div>
+                        </div>
+
+                        <div style="border-top: 1px solid var(--color-gold-border); padding-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; align-items: center;">
+                                <div style="display: flex; gap: 8px; align-items: center;">
+                                    <span>☕</span>
+                                    <div>
+                                        <div style="font-weight: 700;">Executive Breakroom & Pantry</div>
+                                        <div style="font-size: 0.7rem; color: var(--color-text-muted);">Espresso whole beans, herbal teas, dairy</div>
+                                    </div>
+                                </div>
+                                <span style="font-weight: 700;">EGP 12,450</span>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; align-items: center;">
+                                <div style="display: flex; gap: 8px; align-items: center;">
+                                    <span>📄</span>
+                                    <div>
+                                        <div style="font-weight: 700;">IT & Print Lab Inks/Paper</div>
+                                        <div style="font-size: 0.7rem; color: var(--color-text-muted);">80gsm copy paper, 4 LaserJet toners</div>
+                                    </div>
+                                </div>
+                                <span style="font-weight: 700;">EGP 8,200</span>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; align-items: center;">
+                                <div style="display: flex; gap: 8px; align-items: center;">
+                                    <span>🧴</span>
+                                    <div>
+                                        <div style="font-weight: 700;">Sanitation & Hygiene Supplies</div>
+                                        <div style="font-size: 0.7rem; color: var(--color-text-muted);">Eco sanitizers, premium tissues, towels</div>
+                                    </div>
+                                </div>
+                                <span style="font-weight: 700;">EGP 4,350</span>
+                            </div>
+                        </div>
+
+                        <div style="border-top: 1.5px solid var(--color-gold-primary); margin-top: 20px; padding-top: 16px; display: flex; justify-content: space-between; font-size: 0.95rem; font-weight: 700; color: var(--color-gold-primary);">
+                            <span>Consolidated Total Bill</span>
+                            <span>EGP 25,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-content">
+                    <div class="badge-pill">STEP 04</div>
+                    <h3>Consolidated Financial Invoicing</h3>
+                    <p>Streamline corporate accounting by consolidating all office facility categories. Instead of managing dozens of individual vendors, receipts, and net payment schedules, receive a single itemized monthly invoice covering breakroom pantry supplies, print paper, and hardware inks.</p>
+                    <ul class="showcase-list" style="margin-bottom: 0;">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            One single monthly vendor account
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Consolidated itemized B2B invoice statements
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- --- Final CTA --- -->
+    <section class="final-cta">
+        <div class="cta-box reveal">
+            <h2>Experience B2B restocking refined.</h2>
+            <p>Schedule a consult with our workspace designers. Design a logistics program that fits your corporate workflow.</p>
+            <a href="quote.html" class="btn-primary" style="background: #ffffff; color: var(--color-bg-dark); box-shadow: 0 10px 30px rgba(255,255,255,0.1);" id="finalCtaBtn">
+                Apply for Restocking Account
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- --- Footer --- -->
+    <footer>
+        <div class="nav-container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.webp?v=3" alt="Royal Supplies Crown Logo">
+                    <span>ROYAL SUPPLIES</span>
+                </a>
+                <p>White-glove corporate kitchen restocking, luxury office stationery supply, and equipment restocking solutions.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h5>Our Services</h5>
+                <ul class="footer-links">
+                    <li><a href="services.html">Pantry & Hospitality</a></li>
+                    <li><a href="services.html">Office Stationery</a></li>
+                    <li><a href="services.html">Printers & Inks</a></li>
+                    <li><a href="quote.html">Custom Restock Plan</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h5>The Company</h5>
+                <ul class="footer-links">
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html#logistics">Logistics Quality</a></li>
+                    <li><a href="contact.html">Locations</a></li>
+                    <li><a href="contact.html#support">Corporate Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h5>Contact Info</h5>
+                <ul class="footer-links">
+                    <li><a href="mailto:concierge@royalsupplies.com">concierge@royalsupplies.com</a></li>
+                    <li><a href="tel:+20225009988">+20 2 2500 9988</a></li>
+                    <li><a href="contact.html">Cairo & Alexandria Offices</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="nav-container footer-bottom">
+            <p>&copy; 2026 Royal Supplies Corporate. All rights reserved.</p>
+            <p>Luxury Facilities & restocks.</p>
+        </div>
+    </footer>
+
+    <!-- --- Search Overlay --- -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-inner">
+            <div class="search-header-row">
+                <h3 style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500;">Search Royal Supplies</h3>
+                <button class="search-close-btn" id="searchClose" aria-label="Close Search">&times;</button>
+            </div>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input-field" id="searchInputField" placeholder="Type to search products, insights...">
+            </div>
+            <ul class="search-results-list" id="searchResultsList"></ul>
+        </div>
+    </div>
+
+    <script src="assets/main.js" defer></script>
+</body>
+</html>

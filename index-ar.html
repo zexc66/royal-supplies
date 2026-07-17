@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رويال سابلايز | تموين المكاتب وبوفيهات الشركات الكبرى والمتوسطة بمصر</title>
+    <meta name="description" content="رويال سابلايز هي الشركة الرائدة في مصر لتموين المكاتب الإدارية. نورد القهوة الفاخرة، رزم أوراق التصوير، وأحبار الطابعات ليزر للمقرات الكبيرة والمتوسطة في القاهرة والإسكندرية.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <!-- --- Header / Floating Navigation --- -->
+    <header>
+        <div class="nav-container">
+            <a href="index-ar.html" class="logo" id="headerLogo">
+                <img src="assets/logo.webp?v=3" alt="شعار رويال سابلايز الذهبي">
+                <span>رويال سابلايز</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index-ar.html" class="active">الرئيسية</a></li>
+                    
+                    <li><a href="services-ar.html">خدماتنا</a></li>
+                    <li><a href="industries-ar.html">قطاعاتنا</a></li>
+                    <li><a href="about-ar.html">قصتنا</a></li>
+                    <li><a href="news-ar.html">رؤى وأخبار</a></li>
+                    <li><a href="careers-ar.html">وظائف</a></li>
+                    <li><a href="contact-ar.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-trigger-btn" id="searchTrigger" aria-label="فتح البحث">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <a href="index.html" class="lang-switch">English</a>
+                <a href="dashboard-preview-ar.html" class="nav-portal-btn" style="margin-left: 12px; font-size: 0.85rem; font-weight: 600; color: var(--color-text-main); display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-family: var(--font-arabic);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                    بوابة العملاء
+                </a>
+                <a href="quote-ar.html" class="nav-cta" id="navQuoteCta">طلب عرض سعر</a>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle Navigation menu" id="navMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- --- Hero Section --- -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="assets/hero-bg.webp" alt="مطبخ وغرفة استراحة شركات فاخرة ومجهزة">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text-wrapper reveal">
+                <div class="badge-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    تعبئة مكتبية راقية متكاملة
+                </div>
+                <h1>إعادة تجهيز مساحات العمل <span class="serif-accent">الأكثر رقيّاً</span> في مصر.</h1>
+                <p>من أوراق القرطاسية الأرشيفية الفاخرة إلى كبسولات وحبوب إسبريسو غرف الاستراحة الفخمة، نتكفل بتموين منشأتكم بالكامل هدوء وبخدمة متكاملة دون مقاطعة عملكم.</p>
+                <div class="cta-group">
+                    <a href="quote-ar.html" class="btn-primary" id="heroQuoteBtn">
+                        أنشئ حساباً للشركة
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="services-ar.html" class="btn-secondary" id="heroCatalogBtn">استكشف خدمات التموين</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Glassmorphism Stats Card -->
+        <div class="hero-floating-card reveal" style="transition-delay: 0.2s;">
+            <div class="metric-item">
+                <div class="metric-number">99.8%</div>
+                <div class="metric-label">التوصيل الدقيق</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number">1,500+</div>
+                <div class="metric-label">المكاتب المجهزة</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number">بنفس اليوم</div>
+                <div class="metric-label">التجهيز الطارئ السريع</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Partner Sliding Marquee --- -->
+    <div class="marquee-section">
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <div class="marquee-item">البنك التجاري الدولي CIB</div>
+                <div class="marquee-item">المجموعة المالية هيرميس</div>
+                <div class="marquee-item">فودافون مصر</div>
+                <div class="marquee-item">بنك مصر</div>
+                <div class="marquee-item">مجموعة طلعت مصطفى</div>
+                <div class="marquee-item">السويدي إليكتريك</div>
+                <div class="marquee-item">القرية الذكية بمصر</div>
+                <!-- تكرار العناصر لدوران لوغاريتمي سلس بدون فراغات -->
+                <div class="marquee-item">البنك التجاري الدولي CIB</div>
+                <div class="marquee-item">المجموعة المالية هيرميس</div>
+                <div class="marquee-item">فودافون مصر</div>
+                <div class="marquee-item">بنك مصر</div>
+                <div class="marquee-item">مجموعة طلعت مصطفى</div>
+                <div class="marquee-item">السويدي إليكتريك</div>
+                <div class="marquee-item">القرية الذكية بمصر</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- Premium Offerings (Grid) --- -->
+    <section class="offerings-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="badge-pill">محفظة خدماتنا</div>
+                <h2>حلول تموين متكاملة للشركات</h2>
+                <p>شريك موحد يغطي جميع احتياجات منشأتك المكتبية للمحافظة على بيئة عمل مريحة وتركيز فائق لموظفيك.</p>
+            </div>
+
+            <div class="offerings-grid">
+                <!-- Card 1: Pantry & Breakroom -->
+                <div class="offering-card reveal">
+                    <div>
+                        <div class="offering-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                        </div>
+                        <h3>مستلزمات الضيافة والمطبخ</h3>
+                        <p>تعبئة دورية لأفخر خلطات القهوة، الشاي العضوي، المأكولات الخفيفة الصحية، الألبان الطازجة، العصائر، والأكواب ومستلزمات الاستراحة الراقية.</p>
+                    </div>
+                    <a href="services-ar.html" class="card-link" id="pantryCardLink">
+                        تجهيز الضيافة
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Card 2: Office & Desk -->
+                <div class="offering-card reveal" style="transition-delay: 0.1s;">
+                    <div>
+                        <div class="offering-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h3>القرطاسية وأدوات الكتابة</h3>
+                        <p>أوراق تصوير عالية السماكة، أحبار أرشيفية ممتازة، أقلام فاخرة، دفاتر اجتماعات تنفيذية مذهبة، وحلول تنظيم المكاتب الفخمة.</p>
+                    </div>
+                    <a href="services-ar.html" class="card-link" id="officeCardLink">
+                        تجهيز القرطاسية
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Card 3: IT Supplies & Tech -->
+                <div class="offering-card reveal" style="transition-delay: 0.2s;">
+                    <div>
+                        <div class="offering-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                        </div>
+                        <h3>الطابعات ومستلزمات العتاد</h3>
+                        <p>تأمين عبوات أحبار الليزر LaserJet الأصلية، كابلات التوصيل السريع، لوحات المفاتيح والماوسات المريحة.</p>
+                    </div>
+                    <a href="services-ar.html" class="card-link" id="techCardLink">
+                        حلول توريد العتاد
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- B2B Facilities Restock Bundles --- -->
+    <section class="facilities-bundles-section" style="padding: 80px 0; background-color: var(--color-bg-secondary); border-top: 1px solid var(--color-gold-border); border-bottom: 1px solid var(--color-gold-border);">
+        <div class="container">
+            <div class="section-header reveal" style="text-align: center; margin-bottom: 50px;">
+                <div class="badge-pill" style="font-family: var(--font-arabic);">باقات التجهيز</div>
+                <h2 style="font-family: var(--font-arabic);">باقات التموين اللوجستي المهيكلة</h2>
+                <p style="font-family: var(--font-arabic);">اختر خطة التموين الأساسية المناسبة لحجم أعمالك وموظفيك، وهي قابلة للتعديل والتحوير بالكامل.</p>
+            </div>
+
+            <div class="offerings-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Package 1 -->
+                <div class="offering-card reveal" style="background: var(--color-bg-primary); border: 1px solid var(--color-gold-border); box-shadow: 0 10px 30px rgba(0,0,0,0.01); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="height: 180px; overflow: hidden; width: 100%;">
+                        <img  src="assets/b2b-pantry-restock.webp" alt="Gourmet Coffee Beans Restocking" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    </div>
+                    <div style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-gold-primary); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 10px; font-family: var(--font-arabic);">بوفيه الاستراحة والضيافة</span>
+                            <h3 style="font-size: 1.35rem; margin-bottom: 14px; font-family: var(--font-arabic);">حزمة الضيافة التنفيذية</h3>
+                            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 24px; line-height: 1.6; font-family: var(--font-arabic);">برنامج تموين متكامل لبوفيه الموظفين وصالات الاستقبال. نوفر أجود أنواع حبوب بن الإسبريسو الطازجة، تشكيلة فاخرة من شاي الأعشاب، المقرمشات الصحية، الحليب، والأكواب الورقية القابلة للتحلل.</p>
+                            
+                            <ul style="list-style: none; padding-right: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-text-main); margin-bottom: 30px; border-top: 1px solid rgba(175, 141, 76, 0.1); padding-top: 20px; text-align: right; font-family: var(--font-arabic);">
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> حبوب بن أرابيكا محمصة بعناية</li>
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> مظاريف شاي أعشاب فخمة</li>
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> مكسرات ومقرمشات طاقة صحية</li>
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> أكواب وملاعق خشبية صديقة للبيئة</li>
+                            </ul>
+                        </div>
+                        <a href="quote-ar.html" class="btn-primary" style="font-size: 0.8rem; padding: 10px 0; justify-content: center; width: 100%; font-family: var(--font-arabic);">اختيار باقة الضيافة</a>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="offering-card reveal" style="background: var(--color-bg-primary); border: 1.5px solid var(--color-gold-primary); box-shadow: 0 15px 35px rgba(175, 141, 76, 0.05); position: relative; transition-delay: 0.1s; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="position: absolute; top: 12px; left: 50%; transform: translate(-50%, 0); background: var(--gold-gradient); color: #fff; padding: 4px 16px; border-radius: 50px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-arabic); z-index: 10;">الباقة الأكثر طلباً</div>
+                    <div style="height: 180px; overflow: hidden; width: 100%;">
+                        <img  src="assets/b2b-office-supplies.webp" alt="Office Printing Paper Restocking" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    </div>
+                    <div style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-gold-primary); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 10px; margin-top: 10px; font-family: var(--font-arabic);">القرطاسية والطباعة</span>
+                            <h3 style="font-size: 1.35rem; margin-bottom: 14px; font-family: var(--font-arabic);">حزمة المطبعة والقرطاسية</h3>
+                            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 24px; line-height: 1.6; font-family: var(--font-arabic);">مصممة خصيصاً للبيئات الإدارية ذات الاستهلاك المرتفع للأوراق والأحبار. تشمل أوراق تصوير فاخرة، خراطيش أحبار طابعات الليزر، ومستلزمات المكاتب والتدبيس والأرشفة.</p>
+                            
+                            <ul style="list-style: none; padding-right: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-text-main); margin-bottom: 30px; border-top: 1px solid rgba(175, 141, 76, 0.1); padding-top: 20px; text-align: right; font-family: var(--font-arabic);">
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> أوراق تصوير A4/A3 معتمدة بيئياً</li>
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> أحبار طابعات LaserJet أصلية (HP/Canon)</li>
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> أقلام ومستلزمات مكتبية ممتازة</li>
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> ملفات تنظيم وحوافظ الأرشفة</li>
+                            </ul>
+                        </div>
+                        <a href="quote-ar.html" class="btn-primary" style="font-size: 0.8rem; padding: 10px 0; justify-content: center; background: var(--gold-gradient); width: 100%; font-family: var(--font-arabic);">اختيار باقة المكاتب</a>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="offering-card reveal" style="background: var(--color-bg-primary); border: 1px solid var(--color-gold-border); box-shadow: 0 10px 30px rgba(0,0,0,0.01); transition-delay: 0.2s; padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="height: 180px; overflow: hidden; width: 100%;">
+                        <img  src="assets/b2b-office-supplies.webp" alt="Executive Corporate Supplies" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    </div>
+                    <div style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
+                        <div>
+                            <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-gold-primary); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 10px; font-family: var(--font-arabic);">التوريد الشامل للمؤسسات</span>
+                            <h3 style="font-size: 1.35rem; margin-bottom: 14px; font-family: var(--font-arabic);">خطة المقرات السيادية الشاملة</h3>
+                            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 24px; line-height: 1.6; font-family: var(--font-arabic);">باقة الخدمة الكلية للمباني الإدارية والمقرات الكبرى. تدمج بين إمدادات البوفيه والضيافة، مستلزمات الطباعة والقرطاسية بالكامل، بالإضافة إلى المعقمات والمحارم الورقية الفاخرة.</p>
+                            
+                            <ul style="list-style: none; padding-right: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-text-main); margin-bottom: 30px; border-top: 1px solid rgba(175, 141, 76, 0.1); padding-top: 20px; text-align: right; font-family: var(--font-arabic);">
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> تموين كامل لبوفيه الموظفين واستراحات الضيافة</li>
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> باقة أحبار وقرطاسية دورية للشركة</li>
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> معقمات، منظفات صديقة للبيئة ومحارم ورقية فاخرة</li>
+                                <li style="display: flex; align-items: center; gap: 8px; flex-direction: row-reverse;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold-primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> اتفاقية مستوى خدمة (SLA) وأسبقية دعم على مدار الساعة</li>
+                            </ul>
+                        </div>
+                        <a href="quote-ar.html" class="btn-primary" style="font-size: 0.8rem; padding: 10px 0; justify-content: center; width: 100%; font-family: var(--font-arabic);">اختيار الخطة الشاملة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- --- Live Restock Operations Feed (Command Center) --- -->
+    <section class="live-operations-section" style="padding: 60px 0; background-color: var(--color-bg-primary); border-top: 1px solid var(--color-gold-border); text-align: right;">
+        <div class="container">
+            <div class="section-header reveal" style="text-align: center; margin-bottom: 40px;">
+                <div class="badge-pill" style="background: rgba(37, 211, 102, 0.1); color: #25D366; border-color: rgba(37, 211, 102, 0.2); display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-arabic); flex-direction: row-reverse;">
+                    <span class="status-dot" style="display: inline-block; width: 8px; height: 8px; background: #25D366; border-radius: 50%; animation: wa-pulse 1.5s infinite;"></span>
+                    بث العمليات اللوجستية المباشر
+                </div>
+                <h2 style="font-family: var(--font-arabic);">مركز إدارة التموين</h2>
+                <p style="font-family: var(--font-arabic);">تحديثات فورية مباشرة من شبكات التوزيع والتوصيل الليلي الصامت للشركات بمصر.</p>
+            </div>
+
+            <div class="ops-feed-container reveal" style="max-width: 800px; margin: 0 auto; background: var(--color-bg-secondary); border: 1.5px solid var(--color-gold-border); border-radius: var(--border-radius-md); padding: 30px; box-shadow: 0 10px 30px rgba(18, 17, 16, 0.02); overflow: hidden; position: relative;">
+                <div class="ops-feed-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-gold-border); padding-bottom: 16px; margin-bottom: 20px; flex-direction: row-reverse;">
+                    <div style="display: flex; align-items: center; gap: 10px; flex-direction: row-reverse;">
+                        <div style="width: 10px; height: 10px; border-radius: 50%; background: #25D366;"></div>
+                        <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-main); letter-spacing: 0.05em; font-family: var(--font-arabic);">حالة الشبكة: نشطة حالياً</span>
+                    </div>
+                    <span style="font-size: 0.8rem; color: var(--color-text-muted);" id="liveTimeText">23:12:00</span>
+                </div>
+                <div class="ops-feed-logs" id="opsFeedLogs" style="display: flex; flex-direction: column; gap: 14px; min-height: 200px; text-align: right;">
+                    <!-- Logs will roll in here via Javascript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Showcase Section (Editorial Split Grid) --- -->
+    <section class="showcase-section" style="background-color: var(--color-bg-secondary); border-top: 1px solid var(--color-gold-border); border-bottom: 1px solid var(--color-gold-border);">
+        <div class="container">
+            <!-- Split 1: Pantry Focus -->
+            <div class="showcase-split reveal">
+                <div class="showcase-image-wrapper">
+                    <img  src="assets/pantry-showcase.webp" alt="أفخر أنواع القهوة والشاي والشوكولاته العضوية للمكاتب" loading="lazy">
+                </div>
+                <div class="showcase-content">
+                    <div class="badge-pill">ضيافة الشركات الفاخرة</div>
+                    <h3>مستلزمات مطبخ ونقاهة تدعم طاقة العمل ومزاج موظفيك.</h3>
+                    <p>ارتقِ بجلسات الاستراحة والاجتماعات من خلال توفير حبوب القهوة العضوية الممتازة وشاي الزهور العطري والألبان النباتية وسلال التمور والفواكه المجففة المنتقاة بعناية للشركات القيادية في القاهرة.</p>
+                    <ul class="showcase-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            خلطات إسبريسو وحبوب قهوة درجة أولى
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            أكواب ورقية راقية مذهبة وقابلة للتحلل
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            باقات ضيافة لغرف الشاي ومجالس الإدارة
+                        </li>
+                    </ul>
+                    <a href="services-ar.html" class="btn-primary" id="pantryLearnBtn">استكشف خدمات الضيافة</a>
+                </div>
+            </div>
+
+            <!-- Split 2: Stationery Focus -->
+            <div class="showcase-split reveal">
+                <div class="showcase-content">
+                    <div class="badge-pill">قرطاسية وكتابة فاخرة</div>
+                    <h3>أدوات مثالية تعزز قيمة مستنداتك واجتماعاتك التنفيذية.</h3>
+                    <p>أوراق ملمس قطني ثقيل، أحبار ممتازة خالية من التلطخ، ودفاتر جلدية فاخرة. نضمن لك المحافظة على رصيد خزائن القرطاسية وغرف المستندات ممتلئة بأفخر أنواع الأدوات دون أي تدخل منك.</p>
+                    <ul class="showcase-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            أوراق تصوير قطنية 90جم ذات كثافة استثنائية
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            أقلام مذهبة وأقلام سائلة وأحبار أرشيفية
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            أحبار الليزر وتونرات الطابعات المعتمدة
+                        </li>
+                    </ul>
+                    <a href="services-ar.html" class="btn-primary" id="officeLearnBtn">طلب عرض تموين مخصص</a>
+                </div>
+                <div class="showcase-image-wrapper">
+                    <img  src="assets/office-showcase.webp" alt="أوراق وقرطاسية مكتبية وأقلام كتابة ذهبية فاخرة" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- How We Restock (Timeline Process) --- -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="badge-pill">طريقة العمل</div>
+                <h2>آلية إعادة التعبئة المتكاملة</h2>
+                <p>نعمل بصمت ودقة متناهية خلف الكواليس لنضمن لك مساحة عمل مجهزة بالكامل دون تشويش تركيزك.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item active reveal">
+                    <div class="timeline-badge">١</div>
+                    <div class="timeline-content">
+                        <h4>الاستشارة والتدقيق</h4>
+                        <p>نقوم بدراسة معدل استهلاك القرطاسية والضيافة والورق في شركتك، وبناء خطة تموين دورية دقيقة مخصصة لعدد موظفي مساحتك.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal" style="transition-delay: 0.1s;">
+                    <div class="timeline-badge">٢</div>
+                    <div class="timeline-content">
+                        <h4>منسق حسابات مخصص</h4>
+                        <p>يتم تعيين منسق onboarding مخصص لشركتك، يتابع جدولك الأسبوعي، ويلبي الطلبات الطارئة والتعديلات فوراً.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal" style="transition-delay: 0.2s;">
+                    <div class="timeline-badge">٣</div>
+                    <div class="timeline-content">
+                        <h4>التجهيز والتوزيع الليلي الهادئ</h4>
+                        <p>يقوم طاقمنا اللوجستي المرخص بتسليم ورص المستلزمات مباشرة داخل دواليب القرطاسية وحجرات المطبخ والطابعات ليلاً لتستقبل صباحاً مكتباً مجهزاً بالكامل.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Testimonials Section --- -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="badge-pill">آراء شركائنا من الشركات</div>
+                <h2>شريك معتمد لدى أكبر الكيانات</h2>
+                <p>اقرأ كيف يثق مدراء المرافق في مساحات الأعمال الراقية بمصر بخدمات رويال سابلايز.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">"أصبحت تعبئة القرطاسية والضيافة تتم بالكامل دون تدخل منا. كنا نعاني سابقاً للحفاظ على وفرة القهوة وأوراق المكاتب، الآن رويال سابلايز ترص كل شيء ليلاً، نشعر وكأنه سحر."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">س ر</div>
+                        <div class="user-info">
+                            <h5>سارة الرفاعي</h5>
+                            <p>مديرة المرافق والبيئة، STC الرقمية</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card reveal" style="transition-delay: 0.1s;">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">"جودة القرطاسية والأقلام مذهلة. إن الحفاظ على أوراق المستندات الفخمة ذات الأوزان العالية ممتلئة بشكل دوري هو واجهتنا في اجتماعات مجلس الإدارة. شريك استثنائي للشركات."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">ف س</div>
+                        <div class="user-info">
+                            <h5>فيصل آل سعود</h5>
+                            <p>مدير العمليات، مصر القابضة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card reveal" style="transition-delay: 0.2s;">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">"يعشق موظفونا جودة حبوب القهوة والشاي العضوي المتوفرة. ساهم هذا الأمر في رفع نسبة الرضا والراحة أثناء فترات الراحة بشكل ملحوظ. رويال سابلايز شريك لا غنى عنه."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">خ م</div>
+                        <div class="user-info">
+                            <h5>خالد منصور</h5>
+                            <p>رئيس قسم بيئة العمل، المقر الرئيسي لنيوم NEOM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- Final CTA --- -->
+    <section class="final-cta">
+        <div class="cta-box reveal">
+            <h2>ابدأ تجربة تعبئة مكتبية بلا مجهود اليوم.</h2>
+            <p>أنشئ حساباً لشركتك واحصل على خطة تموين مخصصة ومصممة بدقة لقطاعات الضيافة والقرطاسية والعتاد.</p>
+            <a href="quote-ar.html" class="btn-primary" style="background: #ffffff; color: var(--color-bg-dark); box-shadow: 0 10px 30px rgba(255,255,255,0.1);" id="finalCtaBtn">
+                تقديم طلب حساب شركات
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- --- Footer --- -->
+    <footer>
+        <div class="nav-container footer-grid">
+            <div class="footer-brand">
+                <a href="index-ar.html" class="logo">
+                    <img src="assets/logo.webp?v=3" alt="رويال سابلايز شعار التاج">
+                    <span>رويال سابلايز</span>
+                </a>
+                <p>خدمات تعبئة مطابخ مكاتب الشركات الفاخرة، توريد القرطاسية وأدوات الكتابة وتجهيز عتاد الأحبار والأوراق بالإسكندرية والقاهرة.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h5>خدماتنا</h5>
+                <ul class="footer-links">
+                    <li><a href="services-ar.html">مستلزمات الضيافة</a></li>
+                    <li><a href="services-ar.html">قرطاسية المكاتب</a></li>
+                    <li><a href="services-ar.html">الأحبار والطابعات</a></li>
+                    <li><a href="quote-ar.html">خطة تموين مخصصة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h5>الشركة</h5>
+                <ul class="footer-links">
+                    <li><a href="about-ar.html">قصتنا</a></li>
+                    <li><a href="about-ar.html#logistics">جودة الخدمات اللوجستية</a></li>
+                    <li><a href="contact-ar.html">فروعنا ومستودعاتنا</a></li>
+                    <li><a href="contact-ar.html#support">دعم الشركات</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h5>معلومات التواصل</h5>
+                <ul class="footer-links">
+                    <li><a href="mailto:concierge@royalsupplies.com">concierge@royalsupplies.com</a></li>
+                    <li><a href="tel:+20225009988"><span dir="ltr">+20 2 2500 9988</span></a></li>
+                    <li><a href="contact-ar.html">مكاتب القاهرة والإسكندرية</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="nav-container footer-bottom">
+            <p>&copy; ٢٠٢٦ رويال سابلايز للشركات. جميع الحقوق محفوظة.</p>
+            <p>تموين وتجهيز المرافق المكتبية الراقية.</p>
+        </div>
+    </footer>
+
+    <!-- --- Search Overlay --- -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-inner">
+            <div class="search-header-row">
+                <h3 style="font-family: var(--font-arabic); font-size: 1.5rem; font-weight: 500;">البحث في رويال سابلايز</h3>
+                <button class="search-close-btn" id="searchClose" aria-label="إغلاق البحث">&times;</button>
+            </div>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input-field" id="searchInputField" placeholder="ابحث عن منتجات، مقالات، خدمات...">
+            </div>
+            <ul class="search-results-list" id="searchResultsList"></ul>
+        </div>
+    </div>
+
+    <script src="assets/main.js" defer></script>
+</body>
+</html>

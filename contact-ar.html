@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل مع كونسيرج حسابات الشركات | رويال سابلايز</title>
+    <meta name="description" content="اتصل بفريق رويال سابلايز للتموين. استفسر عن حسابات الشركات اللوجستية وجداول التجهيزات في القاهرة والإسكندرية والمناطق المحيطة.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "في أي ساعات تتم عملية التجهيز والتوزيع الليلي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "تتم التوريدات وعمليات رص المنتجات من قبل طواقمنا بين الساعة العاشرة مساءً والسادسة صباحاً طوال أيام الأسبوع. ننسق إجراءات الدخول واستلام المفاتيح والبطاقات الممغنطة مع إدارة المبنى أو حراس الأمن لديكم لتتم العملية بأمان وسرية تامة دون إزعاج موظفيكم."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف يتم حساب وتحديد حجم سلة التوريد المناسبة للمكتب؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "أثاء مرحلة الـ onboarding، نقوم بفحص شامل لمعدل طباعة الأوراق اليومية، وحجم استهلاك أحبار الطابعات، وحجم تناول القهوة والشاي. نحدد بناءً عليها خطاً أساسياً شهرياً (على سبيل المثال: تعبئة كل أسبوعين) ومرونة كاملة لتعديل الكمية تزامناً مع تغير عدد موظفي مكاتبكم."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكننا إرسال طلبات تموين استثنائية وطارئة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم بالتأكيد. تملك الحسابات النشطة خطاً ساخناً ومباشراً مع كونسيرج onboarding المخصص لهم. في حال حدوث نقص مفاجئ غير متوقع في أوراق الطباعة أو مستلزمات بوفيه الضيافة، نرسل شحنات إسعافية طارئة خلال ساعات لتأمين العمل."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ما هي المناطق والمدن المغطاة بالخدمة في مصر؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نغطي حالياً بعمليات التوصيل والترتيب الليلي الصامت مكاتب ومقرات الشركات في نطاق القاهرة الكبرى (شاملاً القرية الذكية، التجمع الخامس، المعادي، مصر الجديدة، والجيزة) وفي الإسكندرية (شاملاً سموحة والمنطقة الصناعية ببرج العرب)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل توفرون تسهيلات دفع بنظام الدفع الآجل للشركات؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، نوفر للشركات والمؤسسات المعتمدة فترات فوترة ميسرة بنظام Net-30 وNet-60 آجل. هذا يتيح لإدارات المشتريات دمج تكاليف تموين البوفيه والقرطاسية والأحبار في فاتورة شهرية واحدة مجمعة وسدادها دفعة واحدة."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف تضمنون أمن المقرات أثناء التموين الليلي؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "تخضع جميع طواقمنا اللوجستية الميدانية لفحوصات أمنية وفيش جنائي دوري وصارم. ننسق بروتوكولات الدخول تحت الإشراف الأمني لشركتكم ومسؤولي المبنى، كما يوقع أفراد الطاقم على اتفاقيات سرية بيانات صارمة (NDAs) لضمان خصوصية وأمان مقراتكم."
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        .faq-container {
+            margin-top: 80px;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--color-gold-border);
+            padding: 24px 0;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+            color: var(--color-text-muted);
+            margin-top: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            margin-top: 16px;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+            color: var(--color-gold-primary);
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- Header --- -->
+    <header>
+        <div class="nav-container">
+            <a href="index-ar.html" class="logo" id="headerLogo">
+                <img src="assets/logo.webp?v=3" alt="رويال سابلايز شعار التاج">
+                <span>رويال سابلايز</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index-ar.html">الرئيسية</a></li>
+                    
+                    <li><a href="services-ar.html">خدماتنا</a></li>
+                    <li><a href="industries-ar.html">قطاعاتنا</a></li>
+                    <li><a href="about-ar.html">قصتنا</a></li>
+                    <li><a href="news-ar.html">رؤى وأخبار</a></li>
+                    <li><a href="careers-ar.html">وظائف</a></li>
+                    <li><a href="contact-ar.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-trigger-btn" id="searchTrigger" aria-label="فتح البحث">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <a href="contact.html" class="lang-switch">English</a>
+                <a href="dashboard-preview-ar.html" class="nav-portal-btn" style="margin-left: 12px; font-size: 0.85rem; font-weight: 600; color: var(--color-text-main); display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-family: var(--font-arabic);">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                    بوابة العملاء
+                </a>
+                <a href="quote-ar.html" class="nav-cta" id="navQuoteCta">طلب عرض سعر</a>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle Navigation menu" id="navMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- --- Subpage Hero --- -->
+    <section class="about-hero" style="padding-bottom: 60px;">
+        <div class="container reveal">
+            <div class="badge-pill">اتصل بنا</div>
+            <h1>تواصل مع الكونسيرج الخاص بنا</h1>
+            <p style="max-width: 650px; margin: 20px auto 0 auto; color: var(--color-text-muted);">يسعدنا الرد على استفسارات تأسيس حسابات الشركات أو تقديم الدعم اللوجستي الفني للحسابات النشطة حالياً.</p>
+        </div>
+    </section>
+
+    <!-- --- Contact Details & Form --- -->
+    <section style="padding-top: 40px;" id="support">
+        <div class="container">
+            <div class="contact-layout reveal">
+                
+                <!-- Info block -->
+                <div class="contact-info-block">
+                    <div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 12px; font-family: var(--font-arabic); font-weight: 500;">المستودعات ومراكز التوزيع</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.5;">ندير فروع ومراكز توزيع مجهزة بالكامل لضمان التوصيل الليلي الصامت والسريع.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>المقر الرئيسي - القاهرة</h4>
+                            <p>طريق النصر، حي المعادي، القاهرة <span dir="ltr">11431</span>، جمهورية مصر العربية</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>مركز الإسكندرية اللوجستي</h4>
+                            <p>حي سموحة، طريق ألبرت الأول، الإسكندرية <span dir="ltr">21615</span>، جمهورية مصر العربية</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>اتصال هاتفي مباشر</h4>
+                            <p><a href="tel:+20225009988"><span dir="ltr">+20 2 2500 9988</span></a> (مكتب الكونسيرج)</p>
+                            <p><a href="tel:+20225009999"><span dir="ltr">+20 2 2500 9999</span></a> (خط الدعم الفني للشركات)</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>البريد الإلكتروني</h4>
+                            <p><a href="mailto:concierge@royalsupplies.com">concierge@royalsupplies.com</a></p>
+                            <p><a href="mailto:support@royalsupplies.com">support@royalsupplies.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <div class="quote-form-container">
+                    <h3 style="font-size: 1.75rem; margin-bottom: 8px;">راسلنا إلكترونياً</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 30px;">لديك سؤال عام أو رغبة في استئناف خطة توريد سابقة؟ أرسل رسالتك وسيجيب فريقنا فوراً.</p>
+                    
+                    <form id="generalContactForm">
+                        <div class="form-group">
+                            <label for="fullName">الاسم بالكامل</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="سارة الرفاعي" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="companyName">اسم الجهة / المنشأة</label>
+                            <input type="text" id="companyName" name="companyName" placeholder="الاتصالات المصرية الرقمية" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactEmail">البريد الإلكتروني للعمل</label>
+                                <input type="email" id="contactEmail" name="contactEmail" placeholder="s.rafie@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">رقم جوال للتواصل</label>
+                                <input type="tel" id="contactPhone" name="contactPhone" placeholder="+20 1X XXXX XXXX" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactNotes">تفاصيل الرسالة</label>
+                            <textarea id="contactNotes" name="contactNotes" rows="5" placeholder="أدخل تفاصيل سؤالك أو متطلبات الضيافة والقرطاسية المطلوبة..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 18px 0;" id="submitContactBtn">
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- --- FAQ Section --- -->
+            <div class="faq-container reveal">
+                <div class="section-header" style="margin-bottom: 40px;">
+                    <div class="badge-pill">الأسئلة الشائعة</div>
+                    <h2>تساؤلات شائعة حول التموين</h2>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>في أي ساعات تتم عملية التجهيز والتوزيع الليلي؟</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تتم التوريدات وعمليات رص المنتجات من قبل طواقمنا بين الساعة العاشرة مساءً والسادسة صباحاً طوال أيام الأسبوع. ننسق إجراءات الدخول واستلام المفاتيح والبطاقات الممغنطة مع إدارة المبنى أو حراس الأمن لديكم لتتم العملية بأمان وسرية تامة دون إزعاج موظفيكم.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كيف يتم حساب وتحديد حجم سلة التوريد المناسبة للمكتب؟</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>أثناء مرحلة الـ onboarding، نقوم بفحص شامل لمعدل طباعة الأوراق اليومية، وحجم استهلاك أحبار الطابعات، وحجم تناول القهوة والشاي. نحدد بناءً عليها خطاً أساسياً شهرياً (على سبيل المثال: تعبئة كل أسبوعين) ومرونة كاملة لتعديل الكمية تزامناً مع تغير عدد موظفي مكاتبكم.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل يمكننا إرسال طلبات تموين استثنائية وطارئة؟</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم بالتأكيد. تملك الحسابات النشطة خطاً ساخناً ومباشراً مع كونسيرج onboarding المخصص لهم. في حال حدوث نقص مفاجئ غير متوقع في أوراق الطباعة أو مستلزمات بوفيه الضيافة، نرسل شحنات إسعافية طارئة خلال ساعات لتأمين العمل.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما هي المناطق والمدن المغطاة بالخدمة في مصر؟</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نغطي حالياً بعمليات التوصيل والترتيب الليلي الصامت مكاتب ومقرات الشركات في نطاق القاهرة الكبرى (شاملاً القرية الذكية، التجمع الخامس، المعادي، مصر الجديدة، والجيزة) وفي الإسكندرية (شاملاً سموحة والمنطقة الصناعية ببرج العرب).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل توفرون تسهيلات دفع بنظام الدفع الآجل للشركات؟</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، نوفر للشركات والمؤسسات المعتمدة فترات فوترة ميسرة بنظام Net-30 وNet-60 آجل. هذا يتيح لإدارات المشتريات دمج تكاليف تموين البوفيه والقرطاسية والأحبار في فاتورة شهرية واحدة مجمعة وسدادها دفعة واحدة.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كيف تضمنون أمن المقرات أثناء التموين الليلي؟</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تخضع جميع طواقمنا اللوجستية الميدانية لفحوصات أمنية وفيش جنائي دوري وصارم. ننسق بروتوكولات الدخول تحت الإشراف الأمني لشركتكم ومسؤولي المبنى، كما يوقع أفراد الطاقم على اتفاقيات سرية بيانات صارمة (NDAs) لضمان خصوصية وأمان مقراتكم.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="success-modal-overlay" id="modalOverlay"></div>
+    <div class="success-modal" id="successModal">
+        <div class="success-icon-badge">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h3 style="font-size: 1.75rem; margin-bottom: 12px; font-family: var(--font-arabic); font-weight: 500;">تم إرسال رسالتك</h3>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.5;">تم تسليم رسالتك بنجاح. سيقوم مسؤولو onboarding والتموين بالرد على استفسارك إلكترونياً أو بالاتصال الهاتفي في غضون ساعتي عمل.</p>
+        <button class="modal-close-btn" id="modalCloseBtn">العودة للموقع</button>
+    </div>
+
+    <!-- --- Footer --- -->
+    <footer>
+        <div class="nav-container footer-grid">
+            <div class="footer-brand">
+                <a href="index-ar.html" class="logo">
+                    <img src="assets/logo.webp?v=3" alt="رويال سابلايز شعار التاج">
+                    <span>رويال سابلايز</span>
+                </a>
+                <p>خدمات تعبئة مطابخ مكاتب الشركات الفاخرة، توريد القرطاسية وأدوات الكتابة وتجهيز عتاد الأحبار والأوراق بالإسكندرية والقاهرة.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h5>خدماتنا</h5>
+                <ul class="footer-links">
+                    <li><a href="services-ar.html">مستلزمات الضيافة</a></li>
+                    <li><a href="services-ar.html">قرطاسية المكاتب</a></li>
+                    <li><a href="services-ar.html">الأحبار والطابعات</a></li>
+                    <li><a href="quote-ar.html">خطة تموين مخصصة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h5>الشركة</h5>
+                <ul class="footer-links">
+                    <li><a href="about-ar.html">قصتنا</a></li>
+                    <li><a href="about-ar.html#logistics">جودة الخدمات اللوجستية</a></li>
+                    <li><a href="contact-ar.html">فروعنا ومستودعاتنا</a></li>
+                    <li><a href="contact-ar.html#support">دعم الشركات</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h5>معلومات التواصل</h5>
+                <ul class="footer-links">
+                    <li><a href="mailto:concierge@royalsupplies.com">concierge@royalsupplies.com</a></li>
+                    <li><a href="tel:+20225009988"><span dir="ltr">+20 2 2500 9988</span></a></li>
+                    <li><a href="contact-ar.html">مكاتب القاهرة والإسكندرية</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="nav-container footer-bottom">
+            <p>&copy; ٢٠٢٦ رويال سابلايز للشركات. جميع الحقوق محفوظة.</p>
+            <p>تموين وتجهيز المرافق المكتبية الراقية.</p>
+        </div>
+    </footer>
+
+    <!-- --- Search Overlay --- -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-inner">
+            <div class="search-header-row">
+                <h3 style="font-family: var(--font-arabic); font-size: 1.5rem; font-weight: 500;">البحث في رويال سابلايز</h3>
+                <button class="search-close-btn" id="searchClose" aria-label="إغلاق البحث">&times;</button>
+            </div>
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input-field" id="searchInputField" placeholder="ابحث عن منتجات، مقالات، خدمات...">
+            </div>
+            <ul class="search-results-list" id="searchResultsList"></ul>
+        </div>
+    </div>
+
+    <script src="assets/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    faqItems.forEach(other => {
+                        if (other !== item) other.classList.remove('active');
+                    });
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
