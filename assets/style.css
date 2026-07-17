@@ -1856,10 +1856,40 @@ footer {
         background: rgba(175, 141, 76, 0.04);
         border: 1px solid var(--color-gold-border);
         transition: var(--transition-smooth);
+        flex-shrink: 0; /* Prevent the button from squishing on small screens */
     }
     
     .nav-toggle:hover {
         background: rgba(175, 141, 76, 0.08);
+    }
+
+    /* Header layout optimizations for mobile and tablet screens */
+    .logo {
+        font-size: 1.25rem !important;
+        gap: 8px !important;
+    }
+    .logo img {
+        height: 34px !important;
+    }
+    .header-actions {
+        gap: 10px !important;
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 480px) {
+        .logo {
+            font-size: 1.05rem !important;
+            gap: 6px !important;
+        }
+        .logo img {
+            height: 28px !important;
+        }
+        .header-actions {
+            gap: 6px !important;
+        }
+        .nav-container {
+            padding: 0 12px !important;
+        }
     }
     
     /* Mobile Menu Drawer - Premium Glassmorphism */
