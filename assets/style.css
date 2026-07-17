@@ -188,7 +188,7 @@ header.scrolled .logo img {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 36px;
+    gap: 28px;
     list-style: none;
 }
 
@@ -231,6 +231,34 @@ header.scrolled .logo img {
     align-items: center;
     gap: 18px;
 }
+
+/* --- Client Portal Button in Header --- */
+.nav-portal-btn {
+    margin-right: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.nav-portal-btn:hover {
+    color: var(--color-gold-primary);
+}
+
+.nav-portal-btn.active {
+    color: var(--color-gold-primary);
+}
+
+[dir="rtl"] .nav-portal-btn {
+    margin-right: 0;
+    margin-left: 12px;
+    font-family: var(--font-arabic);
+}
+
 
 .search-trigger-btn {
     background: none;
@@ -1802,13 +1830,14 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-links {
         display: none;
     }
     
-    .header-actions .nav-cta {
-        display: none !important; /* Hide header button to avoid mobile crowding */
+    .header-actions .nav-cta,
+    .header-actions .nav-portal-btn {
+        display: none !important; /* Hide desktop header actions to avoid mobile crowding */
     }
     
     .nav-toggle {
@@ -1873,6 +1902,94 @@ footer {
         color: var(--color-gold-primary);
         transform: scale(1.05);
     }
+
+    /* Staggered mobile links slide animation */
+    .nav-links.active li {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: slideInUp 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+    
+    .nav-links.active li:nth-child(1) { animation-delay: 0.05s; }
+    .nav-links.active li:nth-child(2) { animation-delay: 0.1s; }
+    .nav-links.active li:nth-child(3) { animation-delay: 0.15s; }
+    .nav-links.active li:nth-child(4) { animation-delay: 0.2s; }
+    .nav-links.active li:nth-child(5) { animation-delay: 0.25s; }
+    .nav-links.active li:nth-child(6) { animation-delay: 0.3s; }
+    .nav-links.active li:nth-child(7) { animation-delay: 0.35s; }
+    .nav-links.active li:nth-child(8) { animation-delay: 0.4s; }
+    .nav-links.active li:nth-child(9) { animation-delay: 0.45s; }
+    
+    @keyframes slideInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Mobile Drawer Portal & CTA buttons styling */
+    .mobile-portal-li, .mobile-cta-li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .mobile-portal-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 85%;
+        max-width: 320px;
+        padding: 12px 24px;
+        border: 1.5px solid var(--color-gold-primary);
+        border-radius: 8px;
+        color: var(--color-gold-primary) !important;
+        font-weight: 600;
+        font-size: 0.95rem !important;
+        text-decoration: none;
+        background: transparent;
+        transition: var(--transition-smooth);
+    }
+
+    [dir="rtl"] .mobile-portal-btn {
+        font-family: var(--font-arabic) !important;
+        font-size: 0.9rem !important;
+    }
+
+    .mobile-portal-btn:hover {
+        background: rgba(175, 141, 76, 0.05);
+    }
+
+    .mobile-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 85%;
+        max-width: 320px;
+        padding: 14px 24px;
+        background: var(--gold-gradient);
+        border: none;
+        border-radius: 8px;
+        color: #ffffff !important;
+        font-weight: 600;
+        font-size: 0.95rem !important;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(175, 141, 76, 0.25);
+        transition: var(--transition-smooth);
+    }
+
+    [dir="rtl"] .mobile-cta-btn {
+        font-family: var(--font-arabic) !important;
+        font-size: 0.9rem !important;
+    }
+
+    .mobile-cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(175, 141, 76, 0.35);
+    }
+
 
     
     .nav-container {
@@ -2668,4 +2785,14 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+    .nav-links {
+        gap: 16px;
+    }
+    .nav-container {
+        padding: 0 16px;
+    }
 }

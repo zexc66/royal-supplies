@@ -17,12 +17,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     
     if (navToggle && navLinks) {
-        // Clone CTA into mobile menu for better B2B UX
+        // Clone Portal Button and CTA into mobile menu for better B2B UX
+        const mobileMenuPortal = document.querySelector('.header-actions .nav-portal-btn');
+        if (mobileMenuPortal) {
+            const portalClone = mobileMenuPortal.cloneNode(true);
+            portalClone.className = 'mobile-portal-btn';
+            const svg = portalClone.querySelector('svg');
+            if (svg) {
+                svg.style.stroke = 'var(--color-gold-primary)';
+            }
+            const li = document.createElement('li');
+            li.className = 'mobile-portal-li';
+            li.appendChild(portalClone);
+            navLinks.appendChild(li);
+        }
+
         const mobileMenuCta = document.querySelector('.header-actions .nav-cta');
         if (mobileMenuCta) {
             const ctaClone = mobileMenuCta.cloneNode(true);
-            ctaClone.classList.add('mobile-only-cta');
+            ctaClone.className = 'mobile-cta-btn';
             const li = document.createElement('li');
+            li.className = 'mobile-cta-li';
             li.appendChild(ctaClone);
             navLinks.appendChild(li);
         }
