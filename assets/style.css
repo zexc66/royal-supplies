@@ -259,6 +259,12 @@ header.scrolled .logo img {
     font-family: var(--font-arabic);
 }
 
+/* Hide mobile-specific drawer actions on desktop */
+.mobile-portal-li,
+.mobile-cta-li {
+    display: none !important;
+}
+
 
 .search-trigger-btn {
     background: none;
@@ -1930,7 +1936,7 @@ footer {
     /* Mobile Drawer Portal & CTA buttons styling */
     .mobile-portal-li, .mobile-cta-li {
         width: 100%;
-        display: flex;
+        display: flex !important;
         justify-content: center;
         margin-top: 10px;
     }
