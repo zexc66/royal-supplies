@@ -65,6 +65,13 @@
     <!-- --- Form Section --- -->
     <section style="padding-top: 40px;">
         <div class="container">
+            <div class="sample-box-banner reveal">
+                <div class="sample-banner-info">
+                    <h4>📦 اطلب صندوق العينة التجريبية المجانية لشركتك</h4>
+                    <p>جرب جودة القهوة الإسبريسو، الشاي الفاخر، وأوراق الطباعة عالية الثقل في مكتبك مجاناً قبل توقيع عقود التوريد.</p>
+                </div>
+                <button type="button" class="btn-primary" id="openSampleModalBtn" style="white-space: nowrap; padding: 12px 24px;">اطلب العينة الآن &larr;</button>
+            </div>
             <div class="quote-layout reveal">
                 
                 <!-- Quote Form -->
@@ -401,5 +408,29 @@
             }
         });
     </script>
-</body>
+
+    <!-- --- Sample Box Modal --- -->
+    <div class="sample-modal-backdrop" id="sampleBoxModal">
+        <div class="sample-modal-card">
+            <button type="button" class="sample-modal-close" id="closeSampleModalBtn">&times;</button>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 8px; font-family: var(--font-arabic);">طلب عينة التموين المجانية للشركات</h3>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 24px; font-family: var(--font-arabic);">يتضمن 500 جرام قهوة إسبريسو محموصة، تشكيلة شاي فاخر، عينة أوراق 80 جرام، ومجموعة أدوات نظافة تعقيم.</p>
+            <form id="sampleBoxForm">
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label style="font-weight: 600; font-size: 0.88rem; display: block; margin-bottom: 6px; font-family: var(--font-arabic);">اسم الشركة *</label>
+                    <input type="text" id="sampleCompany" class="form-control" required placeholder="مثال: فودافون مصر / البنك التجاري الدولي بالقرية الذكية">
+                </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label style="font-weight: 600; font-size: 0.88rem; display: block; margin-bottom: 6px; font-family: var(--font-arabic);">عنوان مكتب التوصيل *</label>
+                    <input type="text" id="sampleAddress" class="form-control" required placeholder="المبنى / الشارع / المدينة (القاهرة، الجيزة، الإسكندرية)">
+                </div>
+                <div class="form-group" style="margin-bottom: 24px;">
+                    <label style="font-weight: 600; font-size: 0.88rem; display: block; margin-bottom: 6px; font-family: var(--font-arabic);">رقم هاتف مسؤول المشتريات *</label>
+                    <input type="tel" id="samplePhone" class="form-control" required placeholder="+20 100 000 0000">
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 14px; font-family: var(--font-arabic);">تأكيد إرسال العينة التجريبية &larr;</button>
+            </form>
+        </div>
+    </div>
+    </body>
 </html>

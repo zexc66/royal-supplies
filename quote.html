@@ -65,6 +65,13 @@
     <!-- --- Form Section --- -->
     <section style="padding-top: 40px;">
         <div class="container">
+            <div class="sample-box-banner reveal">
+                <div class="sample-banner-info">
+                    <h4>📦 Request a Complimentary Corporate Sample Box</h4>
+                    <p>Test our gourmet house espresso, premium tea selection, and heavy-duty paper quality delivered directly to your office before signing.</p>
+                </div>
+                <button type="button" class="btn-primary" id="openSampleModalBtn" style="white-space: nowrap; padding: 12px 24px;">Request Trial Box &rarr;</button>
+            </div>
             <div class="quote-layout reveal">
                 
                 <!-- Quote Form -->
@@ -404,5 +411,29 @@
             }
         });
     </script>
-</body>
+
+    <!-- --- Sample Box Modal --- -->
+    <div class="sample-modal-backdrop" id="sampleBoxModal">
+        <div class="sample-modal-card">
+            <button type="button" class="sample-modal-close" id="closeSampleModalBtn">&times;</button>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 8px;">Order Corporate Trial Sample Box</h3>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 24px;">Includes 500g House Roasted Espresso Beans, Premium Tea Selection, 80GSM Copy Paper sample, & Microfiber Cleaning Kit.</p>
+            <form id="sampleBoxForm">
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label style="font-weight: 600; font-size: 0.88rem; display: block; margin-bottom: 6px;">Company Name *</label>
+                    <input type="text" id="sampleCompany" class="form-control" required placeholder="e.g. Vodafone Egypt / CIB Smart Village">
+                </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label style="font-weight: 600; font-size: 0.88rem; display: block; margin-bottom: 6px;">Office Delivery Address *</label>
+                    <input type="text" id="sampleAddress" class="form-control" required placeholder="Building / Street / City (Cairo, Giza, Alex)">
+                </div>
+                <div class="form-group" style="margin-bottom: 24px;">
+                    <label style="font-weight: 600; font-size: 0.88rem; display: block; margin-bottom: 6px;">Procurement Officer Phone *</label>
+                    <input type="tel" id="samplePhone" class="form-control" required placeholder="+20 100 000 0000">
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 14px;">Confirm Trial Box Dispatch &rarr;</button>
+            </form>
+        </div>
+    </div>
+    </body>
 </html>

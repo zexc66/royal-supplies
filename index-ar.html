@@ -340,6 +340,57 @@
         </div>
     </section>
 
+    <!-- --- حاسبة العائد والتوفير المالي للمشتريات --- -->
+    <section class="roi-calculator-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="badge-pill">حاسبة التوفير والعائد المالي للشركات</div>
+                <h2>حاسبة المشتريات والتوفير السنوي للمؤسسات</h2>
+                <p>اكتشف قيمة التوفير المالي المباشر وساعات العمل الإدارية المستعادة عند التحول لمنظومة التموين الموحدة من رويال سابلايز.</p>
+            </div>
+
+            <div class="roi-card-wrapper reveal">
+                <div class="roi-grid">
+                    <div class="roi-controls">
+                        <h3>1. اختر عدد الموظفين في شركتك</h3>
+                        <div class="roi-slider-container">
+                            <div class="roi-slider-header">
+                                <label for="roiHeadcountSlider">إجمالي عدد الموظفين:</label>
+                                <span class="roi-headcount-badge" id="roiHeadcountBadge">150 موظف</span>
+                            </div>
+                            <input type="range" id="roiHeadcountSlider" class="roi-slider" min="15" max="1500" step="5" value="150">
+                        </div>
+
+                        <h3 style="margin-top: 32px;">2. اختر نطاق التموين المطلوب</h3>
+                        <div class="package-toggles">
+                            <div class="package-pill active" data-weight="1.2">☕ القهوة ومستلزمات البوفيه</div>
+                            <div class="package-pill active" data-weight="1.1">🖨️ أوراق وأحبار الطباعة</div>
+                            <div class="package-pill" data-weight="0.9">🧹 أدوات النظافة والتعقيم</div>
+                        </div>
+                    </div>
+
+                    <div class="roi-metrics-column">
+                        <div class="roi-metric-box full-width">
+                            <div class="roi-metric-lbl">التوفير المالي السنوي المتوقع</div>
+                            <div class="roi-metric-val" id="roiSavingsVal">314 ألف ج.م / سنوياً</div>
+                        </div>
+                        <div class="roi-metric-box">
+                            <div class="roi-metric-lbl">ساعات العمل الإدارية الموفرة</div>
+                            <div class="roi-metric-val" id="roiHoursVal">168 ساعة إدارية</div>
+                        </div>
+                        <div class="roi-metric-box">
+                            <div class="roi-metric-lbl">كفاءة الفاتورة الموحدة</div>
+                            <div class="roi-metric-val" style="font-size: 1.05rem;" id="roiInvoiceVal">فاتورة موحدة 1 (بدلاً من 90)</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 36px;">
+                    <a href="quote-ar.html" class="btn-primary" style="padding: 14px 32px;">احصل على عرض الأسعار الرسمي &larr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- --- How We Restock (Timeline Process) --- -->
     <section class="timeline-section">
         <div class="container">

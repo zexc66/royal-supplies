@@ -952,3 +952,200 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+
+// --- B2B Procurement ROI Calculator Engine ---
+function initROICalculator() {
+    const slider = document.getElementById('roiHeadcountSlider');
+    const headcountBadge = document.getElementById('roiHeadcountBadge');
+    const savingsVal = document.getElementById('roiSavingsVal');
+    const hoursVal = document.getElementById('roiHoursVal');
+    const invoiceVal = document.getElementById('roiInvoiceVal');
+    const packagePills = document.querySelectorAll('.package-pill');
+
+    if (!slider || !savingsVal) return;
+
+    function updateCalculations() {
+        const headcount = parseInt(slider.value, 10);
+        if (headcountBadge) headcountBadge.textContent = headcount + ' Employees';
+
+        let activeMultiplier = 0;
+        packagePills.forEach(pill => {
+            if (pill.classList.contains('active')) {
+                activeMultiplier += parseFloat(pill.getAttribute('data-weight') || '1');
+            }
+        });
+        if (activeMultiplier === 0) activeMultiplier = 1;
+
+        // B2B Benchmark calculations for Egypt enterprises
+        const annualSavingsEGP = Math.round(headcount * 950 * activeMultiplier);
+        const annualHoursSaved = Math.round((headcount / 10) * 16 * (activeMultiplier * 0.7));
+        const invoicesSaved = Math.round((headcount / 20) * 12);
+
+        // Format numbers
+        const isRtl = document.documentElement.dir === 'rtl';
+        const formattedSavings = isRtl
+            ? (annualSavingsEGP / 1000).toFixed(0) + ' ألف ج.م / سنوياً'
+            : 'EGP ' + annualSavingsEGP.toLocaleString() + ' / yr';
+
+        const formattedHours = isRtl
+            ? annualHoursSaved + ' ساعة إدارية'
+            : annualHoursSaved + ' Admin Hrs / yr';
+
+        const formattedInvoice = isRtl
+            ? 'فاتورة موحدة 1 (بدلاً من ' + invoicesSaved + ')'
+            : '1 E-Invoice (vs ' + invoicesSaved + ' receipts)';
+
+        savingsVal.textContent = formattedSavings;
+        hoursVal.textContent = formattedHours;
+        invoiceVal.textContent = formattedInvoice;
+    }
+
+    slider.addEventListener('input', updateCalculations);
+
+    packagePills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            pill.classList.toggle('active');
+            updateCalculations();
+        });
+    });
+
+    updateCalculations();
+}
+
+document.addEventListener('DOMContentLoaded', initROICalculator);
+
+
+// --- B2B Sample Box Modal Handler ---
+function initSampleBoxModal() {
+    const triggerBtn = document.getElementById('openSampleModalBtn');
+    const modal = document.getElementById('sampleBoxModal');
+    const closeBtn = document.getElementById('closeSampleModalBtn');
+    const form = document.getElementById('sampleBoxForm');
+
+    if (!triggerBtn || !modal) return;
+
+    triggerBtn.addEventListener('click', () => {
+        modal.classList.add('active');
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+    }
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+    });
+
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const company = document.getElementById('sampleCompany')?.value || 'Enterprise Client';
+            const address = document.getElementById('sampleAddress')?.value || 'Cairo Office';
+
+            const refId = 'ROYAL-SAMPLE-' + Math.floor(1000 + Math.random() * 9000);
+            
+            const isRtl = document.documentElement.dir === 'rtl';
+            const msg = isRtl 
+                ? 'تم تسجيل طلب عينة التموين المجانية بنجاح! رقم المتابعة: ' + refId + '\nسيصل فريق التوريد لمقر شركتكم خلال 24 ساعة.'
+                : 'Corporate Sample Box Request Confirmed! Ref: ' + refId + '\nOur concierge team will deliver your trial package within 24 hours.';
+
+            alert(msg);
+            modal.classList.remove('active');
+            form.reset();
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', initSampleBoxModal);
+
+
+// --- B2B Dashboard Multi-Branch & Export Handler ---
+function initDashboardBranchSimulator() {
+    const branchPills = document.querySelectorAll('.branch-pill');
+    const branchNameHeading = document.getElementById('dashBranchHeading');
+    const exportBtn = document.getElementById('dashExportBtn');
+
+    if (!branchPills.length) return;
+
+    const branchData = {
+        'hq': {
+            nameEn: 'Smart Village HQ Branch',
+            nameAr: 'مقر القرية الذكية (الفرع الرئيسي)',
+            coffeePct: 85,
+            paperPct: 92,
+            tonerPct: 64,
+            snackPct: 78,
+            dept1: 45,
+            dept2: 30,
+            dept3: 25
+        },
+        'maadi': {
+            nameEn: 'Maadi Tech Hub Branch',
+            nameAr: 'فرع التكنولوجيا بالمعادي',
+            coffeePct: 22,
+            paperPct: 55,
+            tonerPct: 30,
+            snackPct: 18,
+            dept1: 55,
+            dept2: 25,
+            dept3: 20
+        },
+        'alex': {
+            nameEn: 'Alexandria Logistics Hub',
+            nameAr: 'مقر الإسكندرية اللوجستي',
+            coffeePct: 90,
+            paperPct: 80,
+            tonerPct: 75,
+            snackPct: 60,
+            dept1: 35,
+            dept2: 40,
+            dept3: 25
+        }
+    };
+
+    branchPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            branchPills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+
+            const code = pill.getAttribute('data-branch') || 'hq';
+            const data = branchData[code] || branchData['hq'];
+
+            const isRtl = document.documentElement.dir === 'rtl';
+            if (branchNameHeading) {
+                branchNameHeading.textContent = isRtl ? data.nameAr : data.nameEn;
+            }
+
+            // Update gauges
+            const coffeeVal = document.getElementById('gaugeValCoffee');
+            const paperVal = document.getElementById('gaugeValPaper');
+            const tonerVal = document.getElementById('gaugeValToner');
+            const snackVal = document.getElementById('gaugeValSnack');
+
+            if (coffeeVal) coffeeVal.textContent = data.coffeePct + '%';
+            if (paperVal) paperVal.textContent = data.paperPct + '%';
+            if (tonerVal) tonerVal.textContent = data.tonerPct + '%';
+            if (snackVal) snackVal.textContent = data.snackPct + '%';
+
+            // Update Department Fill Bars
+            const fill1 = document.getElementById('deptFill1');
+            const fill2 = document.getElementById('deptFill2');
+            const fill3 = document.getElementById('deptFill3');
+
+            if (fill1) fill1.style.width = data.dept1 + '%';
+            if (fill2) fill2.style.width = data.dept2 + '%';
+            if (fill3) fill3.style.width = data.dept3 + '%';
+        });
+    });
+
+    if (exportBtn) {
+        exportBtn.addEventListener('click', () => {
+            window.print();
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', initDashboardBranchSimulator);

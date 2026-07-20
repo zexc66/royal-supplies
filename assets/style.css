@@ -2847,3 +2847,423 @@ footer {
         padding: 0 16px;
     }
 }
+
+
+/* --- B2B Procurement ROI Calculator Section --- */
+.roi-calculator-section {
+    padding: 90px 0;
+    background: linear-gradient(180deg, rgba(250, 248, 245, 0.6) 0%, rgba(255, 255, 255, 1) 100%);
+    border-top: 1px solid var(--color-gold-border);
+    border-bottom: 1px solid var(--color-gold-border);
+}
+
+.roi-card-wrapper {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(175, 141, 76, 0.2);
+    box-shadow: 0 20px 50px rgba(18, 17, 16, 0.06);
+    padding: 48px;
+    margin-top: 40px;
+}
+
+.roi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.roi-slider-container {
+    margin-top: 24px;
+}
+
+.roi-slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.roi-slider-header label {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--color-text-main);
+}
+
+[dir="rtl"] .roi-slider-header label {
+    font-family: var(--font-arabic);
+}
+
+.roi-headcount-badge {
+    background: var(--gold-gradient);
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px var(--color-gold-shadow);
+}
+
+.roi-slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #e5dfd5;
+    outline: none;
+    accent-color: var(--color-gold-primary);
+    cursor: pointer;
+}
+
+.package-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.package-pill {
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1.5px solid var(--color-gold-border);
+    background: #ffffff;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+[dir="rtl"] .package-pill {
+    font-family: var(--font-arabic);
+    font-size: 0.85rem;
+}
+
+.package-pill.active {
+    background: rgba(175, 141, 76, 0.1);
+    border-color: var(--color-gold-primary);
+    color: var(--color-gold-primary);
+}
+
+.roi-metrics-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.roi-metric-box {
+    background: rgba(250, 248, 245, 0.8);
+    border: 1px solid var(--color-gold-border);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.roi-metric-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(175, 141, 76, 0.12);
+}
+
+.roi-metric-box.full-width {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(175, 141, 76, 0.05) 0%, rgba(175, 141, 76, 0.12) 100%);
+}
+
+.roi-metric-val {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-gold-primary);
+    margin: 8px 0 4px 0;
+}
+
+[dir="rtl"] .roi-metric-val {
+    font-family: var(--font-arabic);
+}
+
+.roi-metric-lbl {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+[dir="rtl"] .roi-metric-lbl {
+    font-family: var(--font-arabic);
+}
+
+@media (max-width: 991px) {
+    .roi-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .roi-card-wrapper {
+        padding: 28px 20px;
+    }
+    .roi-metrics-column {
+        grid-template-columns: 1fr;
+    }
+    .roi-metric-box.full-width {
+        grid-column: span 1;
+    }
+}
+
+
+/* --- Enterprise SLA & Tax Compliance Hub --- */
+.compliance-hub-section {
+    padding: 90px 0;
+    background: #ffffff;
+    border-top: 1px solid var(--color-gold-border);
+}
+
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.compliance-card {
+    background: rgba(250, 248, 245, 0.6);
+    border: 1.5px solid var(--color-gold-border);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.compliance-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(175, 141, 76, 0.12);
+    border-color: var(--color-gold-primary);
+    background: #ffffff;
+}
+
+.compliance-icon-badge {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(175, 141, 76, 0.1);
+    color: var(--color-gold-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    font-size: 1.5rem;
+}
+
+.compliance-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 12px;
+}
+
+[dir="rtl"] .compliance-card h3 {
+    font-family: var(--font-arabic);
+}
+
+.compliance-card p {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+[dir="rtl"] .compliance-card p {
+    font-family: var(--font-arabic);
+}
+
+.compliance-tag {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 4px 12px;
+    background: rgba(175, 141, 76, 0.15);
+    color: var(--color-gold-primary);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .compliance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .compliance-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- B2B Corporate Sample Box Module --- */
+.sample-box-banner {
+    background: linear-gradient(135deg, rgba(175, 141, 76, 0.08) 0%, rgba(175, 141, 76, 0.15) 100%);
+    border: 1.5px solid var(--color-gold-border);
+    border-radius: 16px;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(18, 17, 16, 0.04);
+}
+
+.sample-banner-info h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 6px;
+}
+
+[dir="rtl"] .sample-banner-info h4 {
+    font-family: var(--font-arabic);
+}
+
+.sample-banner-info p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+[dir="rtl"] .sample-banner-info p {
+    font-family: var(--font-arabic);
+}
+
+.sample-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 17, 16, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-smooth);
+}
+
+.sample-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sample-modal-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid var(--color-gold-border);
+    max-width: 520px;
+    width: 100%;
+    padding: 36px;
+    box-shadow: 0 25px 60px rgba(18, 17, 16, 0.2);
+    position: relative;
+    transform: translateY(20px);
+    transition: var(--transition-smooth);
+}
+
+.sample-modal-backdrop.active .sample-modal-card {
+    transform: translateY(0);
+}
+
+.sample-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+[dir="rtl"] .sample-modal-close {
+    right: auto;
+    left: 20px;
+}
+
+@media (max-width: 768px) {
+    .sample-box-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* --- B2B Dashboard Multi-Branch & Department Allocation --- */
+.branch-selector-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.branch-pill {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.branch-pill.active {
+    background: var(--gold-gradient);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(175, 141, 76, 0.3);
+}
+
+.dept-allocation-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+.dept-row {
+    margin-bottom: 16px;
+}
+
+.dept-row:last-child {
+    margin-bottom: 0;
+}
+
+.dept-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 6px;
+}
+
+.dept-progress-bg {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dept-progress-fill {
+    height: 100%;
+    background: var(--gold-gradient);
+    border-radius: 4px;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}

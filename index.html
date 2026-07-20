@@ -341,6 +341,57 @@
         </div>
     </section>
 
+    <!-- --- B2B Procurement ROI Calculator --- -->
+    <section class="roi-calculator-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="badge-pill">B2B ROI & COST ESTIMATOR</div>
+                <h2>Calculate Enterprise Savings & Admin Efficiency</h2>
+                <p>See how much your organization saves in direct capital and administrative hours by switching to Royal Supplies consolidated restocking.</p>
+            </div>
+
+            <div class="roi-card-wrapper reveal">
+                <div class="roi-grid">
+                    <div class="roi-controls">
+                        <h3>1. Select Office Headcount</h3>
+                        <div class="roi-slider-container">
+                            <div class="roi-slider-header">
+                                <label for="roiHeadcountSlider">Enterprise Headcount:</label>
+                                <span class="roi-headcount-badge" id="roiHeadcountBadge">150 Employees</span>
+                            </div>
+                            <input type="range" id="roiHeadcountSlider" class="roi-slider" min="15" max="1500" step="5" value="150">
+                        </div>
+
+                        <h3 style="margin-top: 32px;">2. Select Care Scope</h3>
+                        <div class="package-toggles">
+                            <div class="package-pill active" data-weight="1.2">☕ Coffee & Pantry</div>
+                            <div class="package-pill active" data-weight="1.1">🖨️ Copy Paper & Toner</div>
+                            <div class="package-pill" data-weight="0.9">🧹 Janitorial & Sanitation</div>
+                        </div>
+                    </div>
+
+                    <div class="roi-metrics-column">
+                        <div class="roi-metric-box full-width">
+                            <div class="roi-metric-lbl">Estimated Annual Capital Savings</div>
+                            <div class="roi-metric-val" id="roiSavingsVal">EGP 313,500 / yr</div>
+                        </div>
+                        <div class="roi-metric-box">
+                            <div class="roi-metric-lbl">Admin Hours Recovered</div>
+                            <div class="roi-metric-val" id="roiHoursVal">168 Hrs / yr</div>
+                        </div>
+                        <div class="roi-metric-box">
+                            <div class="roi-metric-lbl">Tax Invoice Consolidation</div>
+                            <div class="roi-metric-val" style="font-size: 1.15rem;" id="roiInvoiceVal">1 E-Invoice (vs 90 receipts)</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 36px;">
+                    <a href="quote.html" class="btn-primary" style="padding: 14px 32px;">Lock In Enterprise Proposal &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- --- How We Restock (Timeline Process) --- -->
     <section class="timeline-section">
         <div class="container">
