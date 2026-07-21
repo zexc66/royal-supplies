@@ -1149,3 +1149,21 @@ function initDashboardBranchSimulator() {
 }
 
 document.addEventListener('DOMContentLoaded', initDashboardBranchSimulator);
+
+
+// --- Accessibility & Keyboard Event Handling ---
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        const searchOverlay = document.querySelector('.search-overlay.active');
+        if (searchOverlay) searchOverlay.classList.remove('active');
+
+        const sampleModal = document.querySelector('.sample-modal-backdrop.active');
+        if (sampleModal) sampleModal.classList.remove('active');
+
+        const navLinks = document.querySelector('.nav-links.active');
+        if (navLinks) {
+            navLinks.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+});

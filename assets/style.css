@@ -1930,7 +1930,7 @@ footer {
     }
     
     @keyframes fadeMenu {
-        from { opacity: 0; transform: translateY(-20px); }
+        from { opacity: 0; transform: translateY(-10px) scale(0.98); }
         to { opacity: 1; transform: translateY(0); }
     }
     
@@ -3266,4 +3266,52 @@ footer {
     background: var(--gold-gradient);
     border-radius: 4px;
     transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+/* --- Emil Design Engineering System Tokens & Rules --- */
+:root {
+    /* Custom High-Performance Easing Curves (emil-design-eng) */
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+    
+    /* Specific Property Transitions (Avoiding transition: all) */
+    --transition-smooth: transform 200ms var(--ease-out), background-color 200ms var(--ease-out), border-color 200ms var(--ease-out), box-shadow 200ms var(--ease-out), opacity 200ms var(--ease-out);
+    --transition-fast: transform 160ms var(--ease-out), background-color 160ms var(--ease-out), border-color 160ms var(--ease-out), opacity 160ms var(--ease-out);
+}
+
+/* Instant Responsive Press Feedback (scale 0.97 on active) */
+button:active,
+.btn-primary:active,
+.btn-secondary:active,
+.nav-cta:active,
+.mobile-cta-btn:active,
+.mobile-portal-btn:active,
+.package-pill:active,
+.branch-pill:active,
+.compliance-card:active,
+.showcase-card:active,
+.search-trigger-btn:active,
+.lang-switch:active,
+.timeline-item:active,
+.faq-question:active {
+    transform: scale(0.97) !important;
+    transition: transform 100ms var(--ease-out) !important;
+}
+
+/* Accessibility Focus Visible Rings */
+:focus-visible {
+    outline: 2px solid var(--color-gold-primary) !important;
+    outline-offset: 3px !important;
+}
+
+/* Prefers Reduced Motion Rule */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
